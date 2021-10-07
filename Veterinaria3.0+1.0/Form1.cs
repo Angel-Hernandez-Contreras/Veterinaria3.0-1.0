@@ -17,5 +17,15 @@ namespace Veterinaria3._0_1._0
             InitializeComponent();
         }
 
+        private void btnAgregarCita_Click(object sender, EventArgs e)//boton agregar cita
+        {
+            //-------------AGREGAR FICHA CITA
+            int n = dgvFichaCita.Rows.Add();
+
+            dgvFichaCita.Rows[n].Cells[0].Value = txtIdCliente.Text;
+            dgvFichaCita.Rows[n].Cells[1].Value = dtpFechaCita.Value.ToString();
+            dgvFichaCita.Rows[n].Cells[2].Value = txtHoraCita.Text;
+            dgvFichaCita.Rows[n].Cells[3].Value = cbNombreVeterinario.SelectedItem;
+        }
     }
 }
