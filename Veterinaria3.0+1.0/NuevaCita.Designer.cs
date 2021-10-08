@@ -1,7 +1,7 @@
 ﻿
 namespace Veterinaria3._0_1._0
 {
-    partial class Form1
+    partial class NuevaCita
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,16 +34,14 @@ namespace Veterinaria3._0_1._0
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnInformacionClientes = new System.Windows.Forms.Button();
+            this.btnCajero = new System.Windows.Forms.Button();
+            this.btnMercancia = new System.Windows.Forms.Button();
+            this.btnAgendaCita = new System.Windows.Forms.Button();
+            this.btnNuevaCita = new System.Windows.Forms.Button();
+            this.pInformacionMascota = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.clbVacunacionesMascota = new System.Windows.Forms.CheckedListBox();
-            this.dtpFechaNacimientoMascota = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,10 +50,9 @@ namespace Veterinaria3._0_1._0
             this.rbHembraMascota = new System.Windows.Forms.RadioButton();
             this.rbMachoMascota = new System.Windows.Forms.RadioButton();
             this.cbRazaMascota = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.txtColorPielMascota = new System.Windows.Forms.TextBox();
+            this.txtColorPeloMascota = new System.Windows.Forms.TextBox();
             this.cbEspecieMascota = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pInformacionCliente = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -65,7 +62,7 @@ namespace Veterinaria3._0_1._0
             this.txtApellidoCliente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pCita = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -75,7 +72,9 @@ namespace Veterinaria3._0_1._0
             this.txtHoraCita = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pFichaCita = new System.Windows.Forms.Panel();
+            this.lblPrueba = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.dgvFichaCita = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,12 +82,11 @@ namespace Veterinaria3._0_1._0
             this.Veterinario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLimpiarVentana = new System.Windows.Forms.Button();
             this.btnAgregarCita = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pInformacionMascota.SuspendLayout();
+            this.pInformacionCliente.SuspendLayout();
+            this.pCita.SuspendLayout();
+            this.pFichaCita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFichaCita)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,117 +122,101 @@ namespace Veterinaria3._0_1._0
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.btnInformacionClientes);
+            this.panel1.Controls.Add(this.btnCajero);
+            this.panel1.Controls.Add(this.btnMercancia);
+            this.panel1.Controls.Add(this.btnAgendaCita);
+            this.panel1.Controls.Add(this.btnNuevaCita);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(134, 448);
             this.panel1.TabIndex = 6;
             // 
-            // label24
+            // btnInformacionClientes
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(69, 137);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(62, 15);
-            this.label24.TabIndex = 11;
-            this.label24.Text = "Mercancia";
+            this.btnInformacionClientes.Location = new System.Drawing.Point(3, 75);
+            this.btnInformacionClientes.Name = "btnInformacionClientes";
+            this.btnInformacionClientes.Size = new System.Drawing.Size(128, 23);
+            this.btnInformacionClientes.TabIndex = 30;
+            this.btnInformacionClientes.Text = "Informacion Clientes";
+            this.btnInformacionClientes.UseVisualStyleBackColor = true;
+            this.btnInformacionClientes.Click += new System.EventHandler(this.btnInformacionClientes_Click);
             // 
-            // label23
+            // btnCajero
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(29, 108);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(102, 15);
-            this.label23.TabIndex = 3;
-            this.label23.Text = "Precios Productos";
+            this.btnCajero.Location = new System.Drawing.Point(3, 108);
+            this.btnCajero.Name = "btnCajero";
+            this.btnCajero.Size = new System.Drawing.Size(128, 23);
+            this.btnCajero.TabIndex = 29;
+            this.btnCajero.Text = "Cajero";
+            this.btnCajero.UseVisualStyleBackColor = true;
             // 
-            // label22
+            // btnMercancia
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(90, 79);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 15);
-            this.label22.TabIndex = 2;
-            this.label22.Text = "Cajero";
+            this.btnMercancia.Location = new System.Drawing.Point(3, 137);
+            this.btnMercancia.Name = "btnMercancia";
+            this.btnMercancia.Size = new System.Drawing.Size(128, 23);
+            this.btnMercancia.TabIndex = 28;
+            this.btnMercancia.Text = "Mercancia";
+            this.btnMercancia.UseVisualStyleBackColor = true;
+            this.btnMercancia.Click += new System.EventHandler(this.btnMercancia_Click);
             // 
-            // label21
+            // btnAgendaCita
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(43, 50);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(88, 15);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Agenda de Cita";
+            this.btnAgendaCita.Location = new System.Drawing.Point(3, 46);
+            this.btnAgendaCita.Name = "btnAgendaCita";
+            this.btnAgendaCita.Size = new System.Drawing.Size(128, 23);
+            this.btnAgendaCita.TabIndex = 27;
+            this.btnAgendaCita.Text = "Agenda Citas";
+            this.btnAgendaCita.UseVisualStyleBackColor = true;
+            this.btnAgendaCita.Click += new System.EventHandler(this.btnAgendaCita_Click);
             // 
-            // label20
+            // btnNuevaCita
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(35, 24);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(96, 15);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Informacion Cita";
+            this.btnNuevaCita.Location = new System.Drawing.Point(3, 20);
+            this.btnNuevaCita.Name = "btnNuevaCita";
+            this.btnNuevaCita.Size = new System.Drawing.Size(128, 23);
+            this.btnNuevaCita.TabIndex = 12;
+            this.btnNuevaCita.Text = "Nueva Cita";
+            this.btnNuevaCita.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // pInformacionMascota
             // 
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.clbVacunacionesMascota);
-            this.panel2.Controls.Add(this.dtpFechaNacimientoMascota);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.rbHembraMascota);
-            this.panel2.Controls.Add(this.rbMachoMascota);
-            this.panel2.Controls.Add(this.cbRazaMascota);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.txtColorPielMascota);
-            this.panel2.Controls.Add(this.cbEspecieMascota);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtNombreMascota);
-            this.panel2.Location = new System.Drawing.Point(142, 191);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 257);
-            this.panel2.TabIndex = 7;
+            this.pInformacionMascota.Controls.Add(this.label8);
+            this.pInformacionMascota.Controls.Add(this.clbVacunacionesMascota);
+            this.pInformacionMascota.Controls.Add(this.label6);
+            this.pInformacionMascota.Controls.Add(this.label5);
+            this.pInformacionMascota.Controls.Add(this.label4);
+            this.pInformacionMascota.Controls.Add(this.label3);
+            this.pInformacionMascota.Controls.Add(this.label2);
+            this.pInformacionMascota.Controls.Add(this.rbHembraMascota);
+            this.pInformacionMascota.Controls.Add(this.rbMachoMascota);
+            this.pInformacionMascota.Controls.Add(this.cbRazaMascota);
+            this.pInformacionMascota.Controls.Add(this.txtColorPeloMascota);
+            this.pInformacionMascota.Controls.Add(this.cbEspecieMascota);
+            this.pInformacionMascota.Controls.Add(this.label1);
+            this.pInformacionMascota.Controls.Add(this.txtNombreMascota);
+            this.pInformacionMascota.Location = new System.Drawing.Point(142, 191);
+            this.pInformacionMascota.Name = "pInformacionMascota";
+            this.pInformacionMascota.Size = new System.Drawing.Size(308, 257);
+            this.pInformacionMascota.TabIndex = 7;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 209);
+            this.label8.Location = new System.Drawing.Point(3, 199);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 15);
             this.label8.TabIndex = 19;
             this.label8.Text = "Vacunaciones";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(2, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 15);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Fecha Nacimiento";
-            // 
             // clbVacunacionesMascota
             // 
             this.clbVacunacionesMascota.FormattingEnabled = true;
-            this.clbVacunacionesMascota.Location = new System.Drawing.Point(115, 190);
+            this.clbVacunacionesMascota.Location = new System.Drawing.Point(115, 161);
             this.clbVacunacionesMascota.Name = "clbVacunacionesMascota";
-            this.clbVacunacionesMascota.Size = new System.Drawing.Size(190, 58);
+            this.clbVacunacionesMascota.Size = new System.Drawing.Size(190, 94);
             this.clbVacunacionesMascota.TabIndex = 17;
-            // 
-            // dtpFechaNacimientoMascota
-            // 
-            this.dtpFechaNacimientoMascota.Location = new System.Drawing.Point(115, 161);
-            this.dtpFechaNacimientoMascota.Name = "dtpFechaNacimientoMascota";
-            this.dtpFechaNacimientoMascota.Size = new System.Drawing.Size(190, 23);
-            this.dtpFechaNacimientoMascota.TabIndex = 16;
             // 
             // label6
             // 
@@ -250,9 +232,9 @@ namespace Veterinaria3._0_1._0
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 15);
+            this.label5.Size = new System.Drawing.Size(78, 15);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Color de Piel";
+            this.label5.Text = "Color de Pelo";
             // 
             // label4
             // 
@@ -312,20 +294,12 @@ namespace Veterinaria3._0_1._0
             this.cbRazaMascota.Size = new System.Drawing.Size(190, 23);
             this.cbRazaMascota.TabIndex = 9;
             // 
-            // comboBox2
+            // txtColorPeloMascota
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(-153, -180);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 8;
-            // 
-            // txtColorPielMascota
-            // 
-            this.txtColorPielMascota.Location = new System.Drawing.Point(115, 106);
-            this.txtColorPielMascota.Name = "txtColorPielMascota";
-            this.txtColorPielMascota.Size = new System.Drawing.Size(190, 23);
-            this.txtColorPielMascota.TabIndex = 9;
+            this.txtColorPeloMascota.Location = new System.Drawing.Point(115, 106);
+            this.txtColorPeloMascota.Name = "txtColorPeloMascota";
+            this.txtColorPeloMascota.Size = new System.Drawing.Size(190, 23);
+            this.txtColorPeloMascota.TabIndex = 9;
             // 
             // cbEspecieMascota
             // 
@@ -335,24 +309,24 @@ namespace Veterinaria3._0_1._0
             this.cbEspecieMascota.Size = new System.Drawing.Size(190, 23);
             this.cbEspecieMascota.TabIndex = 4;
             // 
-            // panel3
+            // pInformacionCliente
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.txtTelefonoCliente);
-            this.panel3.Controls.Add(this.txtCuentaBanco);
-            this.panel3.Controls.Add(this.txtApellidoCliente);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.txtIdCliente);
-            this.panel3.Controls.Add(this.txtNombreCliente);
-            this.panel3.Location = new System.Drawing.Point(142, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(308, 185);
-            this.panel3.TabIndex = 8;
+            this.pInformacionCliente.BackColor = System.Drawing.SystemColors.Control;
+            this.pInformacionCliente.Controls.Add(this.label14);
+            this.pInformacionCliente.Controls.Add(this.label13);
+            this.pInformacionCliente.Controls.Add(this.label12);
+            this.pInformacionCliente.Controls.Add(this.label11);
+            this.pInformacionCliente.Controls.Add(this.txtTelefonoCliente);
+            this.pInformacionCliente.Controls.Add(this.txtCuentaBanco);
+            this.pInformacionCliente.Controls.Add(this.txtApellidoCliente);
+            this.pInformacionCliente.Controls.Add(this.label10);
+            this.pInformacionCliente.Controls.Add(this.label9);
+            this.pInformacionCliente.Controls.Add(this.txtIdCliente);
+            this.pInformacionCliente.Controls.Add(this.txtNombreCliente);
+            this.pInformacionCliente.Location = new System.Drawing.Point(142, 0);
+            this.pInformacionCliente.Name = "pInformacionCliente";
+            this.pInformacionCliente.Size = new System.Drawing.Size(308, 185);
+            this.pInformacionCliente.TabIndex = 8;
             // 
             // label14
             // 
@@ -429,21 +403,21 @@ namespace Veterinaria3._0_1._0
             this.label9.TabIndex = 20;
             this.label9.Text = "INFORMACION CLIENTE";
             // 
-            // panel4
+            // pCita
             // 
-            this.panel4.Controls.Add(this.label19);
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.cbNombreVeterinario);
-            this.panel4.Controls.Add(this.txtTelefonoVeterinario);
-            this.panel4.Controls.Add(this.txtHoraCita);
-            this.panel4.Controls.Add(this.label15);
-            this.panel4.Controls.Add(this.dtpFechaCita);
-            this.panel4.Location = new System.Drawing.Point(456, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(308, 185);
-            this.panel4.TabIndex = 9;
+            this.pCita.Controls.Add(this.label19);
+            this.pCita.Controls.Add(this.label18);
+            this.pCita.Controls.Add(this.label17);
+            this.pCita.Controls.Add(this.label16);
+            this.pCita.Controls.Add(this.cbNombreVeterinario);
+            this.pCita.Controls.Add(this.txtTelefonoVeterinario);
+            this.pCita.Controls.Add(this.txtHoraCita);
+            this.pCita.Controls.Add(this.label15);
+            this.pCita.Controls.Add(this.dtpFechaCita);
+            this.pCita.Location = new System.Drawing.Point(456, 0);
+            this.pCita.Name = "pCita";
+            this.pCita.Size = new System.Drawing.Size(308, 185);
+            this.pCita.TabIndex = 9;
             // 
             // label19
             // 
@@ -521,16 +495,37 @@ namespace Veterinaria3._0_1._0
             this.dtpFechaCita.Size = new System.Drawing.Size(190, 23);
             this.dtpFechaCita.TabIndex = 20;
             // 
-            // panel5
+            // pFichaCita
             // 
-            this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.dgvFichaCita);
-            this.panel5.Controls.Add(this.btnLimpiarVentana);
-            this.panel5.Controls.Add(this.btnAgregarCita);
-            this.panel5.Location = new System.Drawing.Point(456, 191);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(344, 257);
-            this.panel5.TabIndex = 11;
+            this.pFichaCita.Controls.Add(this.lblPrueba);
+            this.pFichaCita.Controls.Add(this.label25);
+            this.pFichaCita.Controls.Add(this.dgvFichaCita);
+            this.pFichaCita.Controls.Add(this.btnLimpiarVentana);
+            this.pFichaCita.Controls.Add(this.btnAgregarCita);
+            this.pFichaCita.Location = new System.Drawing.Point(456, 191);
+            this.pFichaCita.Name = "pFichaCita";
+            this.pFichaCita.Size = new System.Drawing.Size(344, 257);
+            this.pFichaCita.TabIndex = 11;
+            // 
+            // lblPrueba
+            // 
+            this.lblPrueba.AutoSize = true;
+            this.lblPrueba.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPrueba.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPrueba.Location = new System.Drawing.Point(4, 137);
+            this.lblPrueba.Name = "lblPrueba";
+            this.lblPrueba.Size = new System.Drawing.Size(44, 15);
+            this.lblPrueba.TabIndex = 27;
+            this.lblPrueba.Text = "label20";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(115, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(68, 15);
+            this.label25.TabIndex = 26;
+            this.label25.Text = "FICHA CITA";
             // 
             // dgvFichaCita
             // 
@@ -583,38 +578,29 @@ namespace Veterinaria3._0_1._0
             this.btnAgregarCita.TabIndex = 11;
             this.btnAgregarCita.Text = "Agregar Cita";
             this.btnAgregarCita.UseVisualStyleBackColor = true;
+            this.btnAgregarCita.Click += new System.EventHandler(this.btnAgregarCita_Click_1);
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(115, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(68, 15);
-            this.label25.TabIndex = 26;
-            this.label25.Text = "FICHA CITA";
-            // 
-            // Form1
+            // NuevaCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pFichaCita);
+            this.Controls.Add(this.pCita);
+            this.Controls.Add(this.pInformacionCliente);
+            this.Controls.Add(this.pInformacionMascota);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "NuevaCita";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.pInformacionMascota.ResumeLayout(false);
+            this.pInformacionMascota.PerformLayout();
+            this.pInformacionCliente.ResumeLayout(false);
+            this.pInformacionCliente.PerformLayout();
+            this.pCita.ResumeLayout(false);
+            this.pCita.PerformLayout();
+            this.pFichaCita.ResumeLayout(false);
+            this.pFichaCita.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFichaCita)).EndInit();
             this.ResumeLayout(false);
 
@@ -627,16 +613,9 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pInformacionMascota;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckedListBox clbVacunacionesMascota;
-        private System.Windows.Forms.DateTimePicker dtpFechaNacimientoMascota;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -645,10 +624,9 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.RadioButton rbHembraMascota;
         private System.Windows.Forms.RadioButton rbMachoMascota;
         private System.Windows.Forms.ComboBox cbRazaMascota;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox txtColorPielMascota;
+        private System.Windows.Forms.TextBox txtColorPeloMascota;
         private System.Windows.Forms.ComboBox cbEspecieMascota;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pInformacionCliente;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -658,7 +636,7 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pCita;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
@@ -668,7 +646,7 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.TextBox txtHoraCita;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DateTimePicker dtpFechaCita;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pFichaCita;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridView dgvFichaCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
@@ -677,6 +655,12 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.DataGridViewTextBoxColumn Veterinario;
         private System.Windows.Forms.Button btnLimpiarVentana;
         private System.Windows.Forms.Button btnAgregarCita;
+        private System.Windows.Forms.Button btnCajero;
+        private System.Windows.Forms.Button btnMercancia;
+        private System.Windows.Forms.Button btnAgendaCita;
+        private System.Windows.Forms.Button btnNuevaCita;
+        private System.Windows.Forms.Button btnInformacionClientes;
+        private System.Windows.Forms.Label lblPrueba;
     }
 }
 
