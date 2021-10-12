@@ -36,32 +36,32 @@ namespace Veterinaria3._0_1._0
             this.btnAgendaCita = new System.Windows.Forms.Button();
             this.btnNuevaCita = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTelefonoCliente = new System.Windows.Forms.Label();
+            this.lblCuentaBanco = new System.Windows.Forms.Label();
+            this.lblApellidoCliente = new System.Windows.Forms.Label();
+            this.lblNombreCliente = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblNombreCliente = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.lblCuentaBanco = new System.Windows.Forms.Label();
-            this.lblTelefonoCliente = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblFechaNacimientoMascota = new System.Windows.Forms.Label();
+            this.lblSexoMascota = new System.Windows.Forms.Label();
+            this.lblColorPeloMascota = new System.Windows.Forms.Label();
+            this.lblRazaMascota = new System.Windows.Forms.Label();
+            this.lblEspecieMascota = new System.Windows.Forms.Label();
+            this.lblNombreMascota = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -131,13 +131,13 @@ namespace Veterinaria3._0_1._0
             // 
             this.panel2.Controls.Add(this.lblTelefonoCliente);
             this.panel2.Controls.Add(this.lblCuentaBanco);
-            this.panel2.Controls.Add(this.lblApellido);
+            this.panel2.Controls.Add(this.lblApellidoCliente);
             this.panel2.Controls.Add(this.lblNombreCliente);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtIdCliente);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(142, 0);
@@ -145,51 +145,45 @@ namespace Veterinaria3._0_1._0
             this.panel2.Size = new System.Drawing.Size(323, 372);
             this.panel2.TabIndex = 9;
             // 
-            // label1
+            // lblTelefonoCliente
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CLIENTE";
+            this.lblTelefonoCliente.AutoSize = true;
+            this.lblTelefonoCliente.Location = new System.Drawing.Point(175, 137);
+            this.lblTelefonoCliente.Name = "lblTelefonoCliente";
+            this.lblTelefonoCliente.Size = new System.Drawing.Size(12, 15);
+            this.lblTelefonoCliente.TabIndex = 36;
+            this.lblTelefonoCliente.Text = "*";
+            this.lblTelefonoCliente.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label2
+            // lblCuentaBanco
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Id Cliente";
+            this.lblCuentaBanco.AutoSize = true;
+            this.lblCuentaBanco.Location = new System.Drawing.Point(175, 108);
+            this.lblCuentaBanco.Name = "lblCuentaBanco";
+            this.lblCuentaBanco.Size = new System.Drawing.Size(12, 15);
+            this.lblCuentaBanco.TabIndex = 35;
+            this.lblCuentaBanco.Text = "*";
+            this.lblCuentaBanco.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // textBox1
+            // lblApellidoCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 23);
-            this.textBox1.TabIndex = 2;
+            this.lblApellidoCliente.AutoSize = true;
+            this.lblApellidoCliente.Location = new System.Drawing.Point(175, 79);
+            this.lblApellidoCliente.Name = "lblApellidoCliente";
+            this.lblApellidoCliente.Size = new System.Drawing.Size(12, 15);
+            this.lblApellidoCliente.TabIndex = 34;
+            this.lblApellidoCliente.Text = "*";
+            this.lblApellidoCliente.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // panel3
+            // lblNombreCliente
             // 
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(471, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(323, 448);
-            this.panel3.TabIndex = 10;
+            this.lblNombreCliente.AutoSize = true;
+            this.lblNombreCliente.Location = new System.Drawing.Point(175, 50);
+            this.lblNombreCliente.Name = "lblNombreCliente";
+            this.lblNombreCliente.Size = new System.Drawing.Size(12, 15);
+            this.lblNombreCliente.TabIndex = 33;
+            this.lblNombreCliente.Text = "*";
+            this.lblNombreCliente.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label14
             // 
@@ -227,63 +221,111 @@ namespace Veterinaria3._0_1._0
             this.label11.TabIndex = 29;
             this.label11.Text = "Nombre ";
             // 
-            // lblNombreCliente
+            // txtIdCliente
             // 
-            this.lblNombreCliente.AutoSize = true;
-            this.lblNombreCliente.Location = new System.Drawing.Point(308, 50);
-            this.lblNombreCliente.Name = "lblNombreCliente";
-            this.lblNombreCliente.Size = new System.Drawing.Size(12, 15);
-            this.lblNombreCliente.TabIndex = 33;
-            this.lblNombreCliente.Text = "*";
-            this.lblNombreCliente.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.txtIdCliente.Location = new System.Drawing.Point(175, 21);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(145, 23);
+            this.txtIdCliente.TabIndex = 2;
             // 
-            // lblApellido
+            // label2
             // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(308, 79);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(12, 15);
-            this.lblApellido.TabIndex = 34;
-            this.lblApellido.Text = "*";
-            this.lblApellido.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Id Cliente";
             // 
-            // lblCuentaBanco
+            // label1
             // 
-            this.lblCuentaBanco.AutoSize = true;
-            this.lblCuentaBanco.Location = new System.Drawing.Point(308, 108);
-            this.lblCuentaBanco.Name = "lblCuentaBanco";
-            this.lblCuentaBanco.Size = new System.Drawing.Size(12, 15);
-            this.lblCuentaBanco.TabIndex = 35;
-            this.lblCuentaBanco.Text = "*";
-            this.lblCuentaBanco.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(128, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CLIENTE";
             // 
-            // lblTelefonoCliente
+            // panel3
             // 
-            this.lblTelefonoCliente.AutoSize = true;
-            this.lblTelefonoCliente.Location = new System.Drawing.Point(308, 137);
-            this.lblTelefonoCliente.Name = "lblTelefonoCliente";
-            this.lblTelefonoCliente.Size = new System.Drawing.Size(12, 15);
-            this.lblTelefonoCliente.TabIndex = 36;
-            this.lblTelefonoCliente.Text = "*";
-            this.lblTelefonoCliente.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.panel3.Controls.Add(this.lblFechaNacimientoMascota);
+            this.panel3.Controls.Add(this.lblSexoMascota);
+            this.panel3.Controls.Add(this.lblColorPeloMascota);
+            this.panel3.Controls.Add(this.lblRazaMascota);
+            this.panel3.Controls.Add(this.lblEspecieMascota);
+            this.panel3.Controls.Add(this.lblNombreMascota);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(471, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(323, 448);
+            this.panel3.TabIndex = 10;
             // 
-            // label3
+            // lblFechaNacimientoMascota
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(136, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 15);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Mascota";
+            this.lblFechaNacimientoMascota.AutoSize = true;
+            this.lblFechaNacimientoMascota.Location = new System.Drawing.Point(176, 169);
+            this.lblFechaNacimientoMascota.Name = "lblFechaNacimientoMascota";
+            this.lblFechaNacimientoMascota.Size = new System.Drawing.Size(12, 15);
+            this.lblFechaNacimientoMascota.TabIndex = 48;
+            this.lblFechaNacimientoMascota.Text = "*";
+            this.lblFechaNacimientoMascota.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label4
+            // lblSexoMascota
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 15);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Nombre ";
+            this.lblSexoMascota.AutoSize = true;
+            this.lblSexoMascota.Location = new System.Drawing.Point(175, 137);
+            this.lblSexoMascota.Name = "lblSexoMascota";
+            this.lblSexoMascota.Size = new System.Drawing.Size(12, 15);
+            this.lblSexoMascota.TabIndex = 47;
+            this.lblSexoMascota.Text = "*";
+            this.lblSexoMascota.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblColorPeloMascota
+            // 
+            this.lblColorPeloMascota.AutoSize = true;
+            this.lblColorPeloMascota.Location = new System.Drawing.Point(175, 111);
+            this.lblColorPeloMascota.Name = "lblColorPeloMascota";
+            this.lblColorPeloMascota.Size = new System.Drawing.Size(12, 15);
+            this.lblColorPeloMascota.TabIndex = 46;
+            this.lblColorPeloMascota.Text = "*";
+            this.lblColorPeloMascota.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblRazaMascota
+            // 
+            this.lblRazaMascota.AutoSize = true;
+            this.lblRazaMascota.Location = new System.Drawing.Point(175, 79);
+            this.lblRazaMascota.Name = "lblRazaMascota";
+            this.lblRazaMascota.Size = new System.Drawing.Size(12, 15);
+            this.lblRazaMascota.TabIndex = 45;
+            this.lblRazaMascota.Text = "*";
+            this.lblRazaMascota.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblEspecieMascota
+            // 
+            this.lblEspecieMascota.AutoSize = true;
+            this.lblEspecieMascota.Location = new System.Drawing.Point(175, 50);
+            this.lblEspecieMascota.Name = "lblEspecieMascota";
+            this.lblEspecieMascota.Size = new System.Drawing.Size(12, 15);
+            this.lblEspecieMascota.TabIndex = 44;
+            this.lblEspecieMascota.Text = "*";
+            this.lblEspecieMascota.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblNombreMascota
+            // 
+            this.lblNombreMascota.AutoSize = true;
+            this.lblNombreMascota.Location = new System.Drawing.Point(175, 24);
+            this.lblNombreMascota.Name = "lblNombreMascota";
+            this.lblNombreMascota.Size = new System.Drawing.Size(12, 15);
+            this.lblNombreMascota.TabIndex = 37;
+            this.lblNombreMascota.Text = "*";
+            this.lblNombreMascota.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label8
             // 
@@ -317,9 +359,9 @@ namespace Veterinaria3._0_1._0
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 111);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 15);
+            this.label5.Size = new System.Drawing.Size(78, 15);
             this.label5.TabIndex = 40;
-            this.label5.Text = "Color de Piel";
+            this.label5.Text = "Color de Pelo";
             // 
             // label9
             // 
@@ -339,65 +381,23 @@ namespace Veterinaria3._0_1._0
             this.label10.TabIndex = 38;
             this.label10.Text = "Especie";
             // 
-            // label15
+            // label4
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(308, 24);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(12, 15);
-            this.label15.TabIndex = 37;
-            this.label15.Text = "*";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 15);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "Nombre ";
             // 
-            // label16
+            // label3
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(305, 50);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(12, 15);
-            this.label16.TabIndex = 44;
-            this.label16.Text = "*";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(305, 82);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(12, 15);
-            this.label17.TabIndex = 45;
-            this.label17.Text = "*";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(305, 108);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(12, 15);
-            this.label18.TabIndex = 46;
-            this.label18.Text = "*";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(305, 137);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(12, 15);
-            this.label19.TabIndex = 47;
-            this.label19.Text = "*";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(305, 169);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(12, 15);
-            this.label20.TabIndex = 48;
-            this.label20.Text = "*";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(136, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 15);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Mascota";
             // 
             // btnBuscar
             // 
@@ -440,24 +440,23 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTelefonoCliente;
         private System.Windows.Forms.Label lblCuentaBanco;
-        private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblNombreCliente;
+        private System.Windows.Forms.Label lblApellidoCliente;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblFechaNacimientoMascota;
+        private System.Windows.Forms.Label lblSexoMascota;
+        private System.Windows.Forms.Label lblColorPeloMascota;
+        private System.Windows.Forms.Label lblRazaMascota;
+        private System.Windows.Forms.Label lblEspecieMascota;
+        private System.Windows.Forms.Label lblNombreMascota;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -465,5 +464,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnBuscar;
+        public System.Windows.Forms.Label lblNombreCliente;
     }
 }
