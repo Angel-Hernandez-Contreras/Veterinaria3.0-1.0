@@ -46,6 +46,7 @@ namespace Veterinaria3._0_1._0
             while (Arreglo_IdCliente[n] != null)
             {
                 n++;
+                lblPasarId.Text = lblPasarId.Text + "," + n + ", ";
             }
             //arreglo informacio cliente
             this.Arreglo_IdCliente[n] = IdCliente;
@@ -59,7 +60,8 @@ namespace Veterinaria3._0_1._0
             this.Arreglo_RazaMascota[n] = RazaMascota;
             this.Arreglo_ColorPeloMascota[n] = ColorPeloMascota;
             this.Arreglo_SexoMascota[n] = SexoMascota;
-           
+
+            lblPasarId.Text = Arreglo_IdCliente[n];           
         }
 
 //*********************************************************************************************************
@@ -69,6 +71,13 @@ namespace Veterinaria3._0_1._0
             while (Arreglo_IdCliente[n] != txtIdCliente.Text)
             {
                 n++;
+                if (n < 10)
+                {
+                    MessageBox.Show("No se encontro el Cliente", "Error", MessageBoxButtons.OK);
+                    break;
+                }
+                lblPasarId.Text = lblPasarId.Text + "," + n + ", ";
+
             }
             lblNombreCliente.Text = Arreglo_NombreCliente[n];
             lblApellidoCliente.Text = Arreglo_ApellidoCliente[n];

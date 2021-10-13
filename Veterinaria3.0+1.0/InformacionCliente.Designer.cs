@@ -63,6 +63,7 @@ namespace Veterinaria3._0_1._0
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblPasarId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -409,11 +410,21 @@ namespace Veterinaria3._0_1._0
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // lblPasarId
+            // 
+            this.lblPasarId.AutoSize = true;
+            this.lblPasarId.Location = new System.Drawing.Point(141, 417);
+            this.lblPasarId.Name = "lblPasarId";
+            this.lblPasarId.Size = new System.Drawing.Size(44, 15);
+            this.lblPasarId.TabIndex = 12;
+            this.lblPasarId.Text = "label15";
+            // 
             // InformacionCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblPasarId);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -426,6 +437,7 @@ namespace Veterinaria3._0_1._0
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -465,5 +477,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnBuscar;
         public System.Windows.Forms.Label lblNombreCliente;
+        private System.Windows.Forms.Label lblPasarId;
     }
 }

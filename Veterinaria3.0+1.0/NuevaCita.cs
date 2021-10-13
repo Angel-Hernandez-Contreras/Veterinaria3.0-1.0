@@ -32,6 +32,9 @@ namespace Veterinaria3._0_1._0
                 /*informacion cliente*/txtIdCliente.Text, txtNombreCliente.Text, txtApellidoCliente.Text, txtCuentaBanco.Text, txtTelefonoCliente.Text, 
                 /*informacion mascota*/txtNombreMascota.Text, Convert.ToString(cbEspecieMascota.SelectedItem), Convert.ToString(cbRazaMascota.SelectedItem), txtColorPeloMascota.Text, rbMachoMascota.Checked ? "Macho" : "Hembra"
                 );
+
+            AgendaCita fmAgnCliente = new AgendaCita();
+            fmInfCliente.Show();
         }
 
 //*********************************************************************************************************
