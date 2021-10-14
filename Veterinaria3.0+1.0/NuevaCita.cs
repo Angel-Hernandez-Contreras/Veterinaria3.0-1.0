@@ -67,10 +67,10 @@ namespace Veterinaria3._0_1._0
             switch (cbEspecieMascota.SelectedIndex+1)
             {
                 case 1:
-                    pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\perro.jpg");
+                    pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\gato.jpg");
                     break;
                 case 2:
-                    pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\gato.jpg");
+                    pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\perro.jpg");
                     break;
                 case 3:
                     pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\cuyo.jpg");
