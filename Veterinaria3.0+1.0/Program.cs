@@ -17,7 +17,7 @@ namespace Veterinaria3._0_1._0
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NuevaCita());
+            Application.Run(new Inicio());
         }
     }
 }

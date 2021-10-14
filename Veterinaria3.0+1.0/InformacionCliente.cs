@@ -46,7 +46,6 @@ namespace Veterinaria3._0_1._0
             while (Arreglo_IdCliente[n] != null)
             {
                 n++;
-                lblPasarId.Text = lblPasarId.Text + "," + n + ", ";
             }
             //arreglo informacio cliente
             this.Arreglo_IdCliente[n] = IdCliente;
@@ -60,8 +59,7 @@ namespace Veterinaria3._0_1._0
             this.Arreglo_RazaMascota[n] = RazaMascota;
             this.Arreglo_ColorPeloMascota[n] = ColorPeloMascota;
             this.Arreglo_SexoMascota[n] = SexoMascota;
-
-            lblPasarId.Text = Arreglo_IdCliente[n];           
+      
         }
 
 //*********************************************************************************************************
@@ -76,7 +74,6 @@ namespace Veterinaria3._0_1._0
                     MessageBox.Show("No se encontro el Cliente", "Error", MessageBoxButtons.OK);
                     break;
                 }
-                lblPasarId.Text = lblPasarId.Text + "," + n + ", ";
 
             }
             lblNombreCliente.Text = Arreglo_NombreCliente[n];
@@ -92,7 +89,7 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
-        private void btnNuevaCita_Click(object sender, EventArgs e)//boton Nueva Cita
+        private void btnNuevaCita_Click_1(object sender, EventArgs e)//boton Nueva Cita
         {
             NuevaCita fmNuevaCita = new NuevaCita();
             fmNuevaCita.Show();//llamar al formulario Nueva Cita
@@ -100,11 +97,11 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
-        private void btnAgendaCita_Click(object sender, EventArgs e)//boton Agenda Cita
+        private void btnAgendaCita_Click_1(object sender, EventArgs e)//boton Agenda Cita
         {
             AgendaCita fmAC = new AgendaCita();
             fmAC.Show();//llamar al formulario Agenda Cita
             this.Close();//cerrar clase Informacion Cliente
-        }      
+        }
     }
 }

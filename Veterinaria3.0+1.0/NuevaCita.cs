@@ -42,7 +42,7 @@ namespace Veterinaria3._0_1._0
         {
             AgendaCita fmAgnCliente = new AgendaCita();
             fmAgnCliente.Show();//llamar al formulario Agenda Cita
-            this.Hide();//esconder clase Nueva Cita
+            this.Close();//cerrar clase Nueva Cita
 
         }
 
@@ -51,7 +51,7 @@ namespace Veterinaria3._0_1._0
         {
             InformacionCliente fmInfCliente = new InformacionCliente();
             fmInfCliente.Show();//llamar al formulario Informacion Cliente
-            this.Hide();//esconder clase Nueva Cita
+            this.Close();//cerrar clase Nueva Cita
         }
 
 //*********************************************************************************************************
@@ -59,24 +59,29 @@ namespace Veterinaria3._0_1._0
         {
             Mercancia fmMercancia = new Mercancia();
             fmMercancia.Show();//llamar al formulario Mercancia
-            this.Hide();//esconder clase Nueva Cita
+            this.Close();//cerrar clase Nueva Cita
         }
 
+//*********************************************************************************************************
         private void cbEspecieMascota_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbEspecieMascota.SelectedIndex+1)
             {
                 case 1:
-                    pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\gato.jpg");
+                    //pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\gato.jpg");
+                    pbAnimal.Image = Image.FromFile("C:\\Users\\herna_a09rita\\source\\repos\\Veterinaria3.0+1.0\\Veterinaria3.0+1.0\\imagenes\\gato.jpg");
                     break;
                 case 2:
-                    pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\perro.jpg");
+                    //pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\perro.jpg");
+                    pbAnimal.Image = Image.FromFile("C:\\Users\\herna_a09rita\\source\\repos\\Veterinaria3.0+1.0\\Veterinaria3.0+1.0\\imagenes\\perro.jpg");
                     break;
                 case 3:
-                    pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\cuyo.jpg");
+                    //pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\cuyo.jpg");
+                    pbAnimal.Image = Image.FromFile("C:\\Users\\herna_a09rita\\source\\repos\\Veterinaria3.0+1.0\\Veterinaria3.0+1.0\\imagenes\\cuyo.jpg");
                     break;
                 case 4:
-                    pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\pato.jpg");
+                    //pbAnimal.Image = Image.FromFile("C:\\Users\\HP\\Source\\Repos\\Veterinaria3.0-1.0\\Veterinaria3.0+1.0\\imagenes\\pato.jpg");
+                    pbAnimal.Image = Image.FromFile("C:\\Users\\herna_a09rita\\source\\repos\\Veterinaria3.0+1.0\\Veterinaria3.0+1.0\\imagenes\\pato.jpg");
                     break;
                 default:
                     break;
