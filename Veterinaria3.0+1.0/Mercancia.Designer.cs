@@ -145,22 +145,22 @@ namespace Veterinaria3._0_1._0
             // lblTipoProducto
             // 
             this.lblTipoProducto.AutoSize = true;
-            this.lblTipoProducto.Location = new System.Drawing.Point(237, 112);
+            this.lblTipoProducto.Location = new System.Drawing.Point(187, 112);
             this.lblTipoProducto.Name = "lblTipoProducto";
             this.lblTipoProducto.Size = new System.Drawing.Size(12, 15);
             this.lblTipoProducto.TabIndex = 10;
             this.lblTipoProducto.Text = "*";
-            this.lblTipoProducto.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblTipoProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblExistencia
             // 
             this.lblExistencia.AutoSize = true;
-            this.lblExistencia.Location = new System.Drawing.Point(237, 170);
+            this.lblExistencia.Location = new System.Drawing.Point(187, 170);
             this.lblExistencia.Name = "lblExistencia";
             this.lblExistencia.Size = new System.Drawing.Size(12, 15);
             this.lblExistencia.TabIndex = 9;
             this.lblExistencia.Text = "*";
-            this.lblExistencia.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblExistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
@@ -174,22 +174,23 @@ namespace Veterinaria3._0_1._0
             // lblNombreProducto
             // 
             this.lblNombreProducto.AutoSize = true;
-            this.lblNombreProducto.Location = new System.Drawing.Point(237, 79);
+            this.lblNombreProducto.Location = new System.Drawing.Point(187, 79);
             this.lblNombreProducto.Name = "lblNombreProducto";
+            this.lblNombreProducto.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblNombreProducto.Size = new System.Drawing.Size(12, 15);
             this.lblNombreProducto.TabIndex = 7;
             this.lblNombreProducto.Text = "*";
-            this.lblNombreProducto.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblNombreProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(237, 141);
+            this.lblPrecio.Location = new System.Drawing.Point(187, 141);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(12, 15);
             this.lblPrecio.TabIndex = 8;
             this.lblPrecio.Text = "*";
-            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnBuscarProducto
             // 
@@ -197,7 +198,7 @@ namespace Veterinaria3._0_1._0
             this.btnBuscarProducto.Name = "btnBuscarProducto";
             this.btnBuscarProducto.Size = new System.Drawing.Size(128, 23);
             this.btnBuscarProducto.TabIndex = 6;
-            this.btnBuscarProducto.Text = "Bsucar Producto";
+            this.btnBuscarProducto.Text = "Bucar Producto";
             this.btnBuscarProducto.UseVisualStyleBackColor = true;
             this.btnBuscarProducto.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -234,6 +235,7 @@ namespace Veterinaria3._0_1._0
             this.txtCodigoProducto.Name = "txtCodigoProducto";
             this.txtCodigoProducto.Size = new System.Drawing.Size(100, 23);
             this.txtCodigoProducto.TabIndex = 2;
+            this.txtCodigoProducto.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
             // 
             // label2
             // 

@@ -32,5 +32,12 @@ namespace Veterinaria3._0_1._0
             fmInfCliente.Show();//llamar al formulario Informacion Cliente
             this.Close();//cerrar clase Agenda
         }
+
+        private void btnMercancia_Click(object sender, EventArgs e)
+        {
+            Mercancia formularioMercancia = new Mercancia();
+            formularioMercancia.Show();
+            this.Close();
+        }
     }
 }

@@ -226,6 +226,7 @@ namespace Veterinaria3._0_1._0
             this.btnMercancia.TabIndex = 28;
             this.btnMercancia.Text = "Mercancia";
             this.btnMercancia.UseVisualStyleBackColor = false;
+            this.btnMercancia.Click += new System.EventHandler(this.btnMercancia_Click);
             // 
             // btnAgendaCita
             // 
