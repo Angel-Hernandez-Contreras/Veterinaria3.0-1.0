@@ -249,6 +249,7 @@ namespace Veterinaria3._0_1._0
             this.btnCajero.TabIndex = 29;
             this.btnCajero.Text = "Cajero";
             this.btnCajero.UseVisualStyleBackColor = false;
+            this.btnCajero.Click += new System.EventHandler(this.btnCajero_Click);
             // 
             // btnMercancia
             // 
@@ -723,7 +724,7 @@ namespace Veterinaria3._0_1._0
             this.Controls.Add(this.pInformacionMascota);
             this.Controls.Add(this.panel1);
             this.Name = "NuevaCita";
-            this.Text = "Form1";
+            this.Text = "Nueva Cita";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

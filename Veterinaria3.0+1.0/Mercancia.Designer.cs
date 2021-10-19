@@ -56,7 +56,6 @@ namespace Veterinaria3._0_1._0
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnInformacionClientes);
             this.panel1.Controls.Add(this.btnCajero);
             this.panel1.Controls.Add(this.btnMercancia);
@@ -69,7 +68,7 @@ namespace Veterinaria3._0_1._0
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(3, 166);
+            this.button2.Location = new System.Drawing.Point(141, 195);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 23);
             this.button2.TabIndex = 8;
@@ -94,6 +93,7 @@ namespace Veterinaria3._0_1._0
             this.btnCajero.TabIndex = 29;
             this.btnCajero.Text = "Cajero";
             this.btnCajero.UseVisualStyleBackColor = true;
+            this.btnCajero.Click += new System.EventHandler(this.btnCajero_Click);
             // 
             // btnMercancia
             // 
@@ -270,6 +270,7 @@ namespace Veterinaria3._0_1._0
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

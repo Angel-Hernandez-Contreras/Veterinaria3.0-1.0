@@ -508,6 +508,7 @@ namespace Veterinaria3._0_1._0
             this.btnCajero.TabIndex = 29;
             this.btnCajero.Text = "Cajero";
             this.btnCajero.UseVisualStyleBackColor = false;
+            this.btnCajero.Click += new System.EventHandler(this.btnCajero_Click);
             // 
             // btnMercancia
             // 
@@ -518,6 +519,7 @@ namespace Veterinaria3._0_1._0
             this.btnMercancia.TabIndex = 28;
             this.btnMercancia.Text = "Mercancia";
             this.btnMercancia.UseVisualStyleBackColor = false;
+            this.btnMercancia.Click += new System.EventHandler(this.btnMercancia_Click);
             // 
             // btnAgendaCita
             // 

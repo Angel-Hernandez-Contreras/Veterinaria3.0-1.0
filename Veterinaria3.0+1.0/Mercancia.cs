@@ -20,6 +20,38 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
+        private void btnNuevaCita_Click(object sender, EventArgs e)//boton para ingresar a Nueva Cita
+        {
+            NuevaCita fmNuevaCita = new NuevaCita();
+            fmNuevaCita.Show();//llamar al formulario Nueva Cita
+            this.Close();//cerrar clase Mercancia
+        }
+
+//*********************************************************************************************************
+        private void btnAgendaCita_Click(object sender, EventArgs e)//boton para ingresar a Agenda Cita
+        {
+            AgendaCita fmAgnCita = new AgendaCita();
+            fmAgnCita.Show();//llamar al formulario Agenda Cita
+            this.Close();//cerrar clase Mercancia
+        }
+
+//*********************************************************************************************************
+        private void btnInformacionClientes_Click(object sender, EventArgs e)//boton para ingresar a Informacion Cliente
+        {
+            InformacionCliente fmInfoCliente = new InformacionCliente();
+            fmInfoCliente.Show();//llamar al formulario Informacion Cliente
+            this.Close();//cerrar clase Mercancia
+        }
+
+//*********************************************************************************************************
+        private void btnCajero_Click(object sender, EventArgs e)
+        {
+            Cajero fmCajero = new Cajero();
+            fmCajero.Show();
+            this.Close();
+        }
+
+//*********************************************************************************************************
         private void button1_Click(object sender, EventArgs e)//boton Buscar producto
         {
             Boolean bandera = false;
@@ -46,29 +78,6 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
-        private void btnNuevaCita_Click(object sender, EventArgs e)//boton para ingresar a Nueva Cita
-        {
-            NuevaCita fmNuevaCita = new NuevaCita();
-            fmNuevaCita.Show();//llamar al formulario Nueva Cita
-            this.Close();//cerrar clase Mercancia
-        }
-
-//*********************************************************************************************************
-        private void btnAgendaCita_Click(object sender, EventArgs e)//boton para ingresar a Agenda Cita
-        {
-            AgendaCita fmAgnCita = new AgendaCita();
-            fmAgnCita.Show();//llamar al formulario Agenda Cita
-            this.Close();//cerrar clase Mercancia
-        }
-
-//*********************************************************************************************************
-        private void btnInformacionClientes_Click(object sender, EventArgs e)//boton para ingresar a Informacion Cliente
-        {
-            InformacionCliente fmInfoCliente = new InformacionCliente();
-            fmInfoCliente.Show();//llamar al formulario Informacion Cliente
-            this.Close();//cerrar clase Mercancia
-        }
-
         private void txtCodigoProducto_TextChanged(object sender, EventArgs e)
         {
             //Cambio de color del texto
@@ -84,5 +93,7 @@ namespace Veterinaria3._0_1._0
                 btnBuscarProducto.Enabled = false;
             }
         }
+
+       
     }
 }

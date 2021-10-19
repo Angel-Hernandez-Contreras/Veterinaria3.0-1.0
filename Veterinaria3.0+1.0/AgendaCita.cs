@@ -18,7 +18,7 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
-        private void btnNuevaCita_Click_1(object sender, EventArgs e)//bton para ingresar a Nueva Cita
+        private void btnNuevaCita_Click_1(object sender, EventArgs e)//boton para ingresar a Nueva Cita
         {
             NuevaCita fmNuevaCita = new NuevaCita();
             fmNuevaCita.Show();//llamar al formulario Nueva Cita
@@ -26,23 +26,27 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
-        private void btnInformacionClientes_Click(object sender, EventArgs e)//bton para ingresar a Informacion Cliente
+        private void btnInformacionClientes_Click(object sender, EventArgs e)//boton para ingresar a Informacion Cliente
         {
             InformacionCliente fmInfCliente = new InformacionCliente();
             fmInfCliente.Show();//llamar al formulario Informacion Cliente
             this.Close();//cerrar clase Agenda
         }
 
-        private void btnMercancia_Click(object sender, EventArgs e)
+//*********************************************************************************************************
+        private void btnMercancia_Click(object sender, EventArgs e)//boton para ingresar a Mercancia
         {
             Mercancia formularioMercancia = new Mercancia();
-            formularioMercancia.Show();
-            this.Close();
+            formularioMercancia.Show();//llamar al formulario Mercancia
+            this.Close();//cerrar clase Agenda
         }
-
-        private void btnCajero_Click(object sender, EventArgs e)
+        
+//*********************************************************************************************************
+        private void btnCajero_Click(object sender, EventArgs e)//boton para ingresar a Cajero
         {
-            this.Close();
+            Cajero fmCajero = new Cajero();
+            fmCajero.Show();//llamar al formulario Cajero
+            this.Close();//cerrar clase Agenda
         }
     }
 }

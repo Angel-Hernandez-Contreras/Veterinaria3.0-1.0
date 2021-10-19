@@ -36,6 +36,39 @@ namespace Veterinaria3._0_1._0
             InitializeComponent();
         }
 
+//*********************************************************************************************************
+        private void btnNuevaCita_Click_1(object sender, EventArgs e)//boton para ingresar a Nueva Cita
+        {
+            NuevaCita fmNuevaCita = new NuevaCita();
+            fmNuevaCita.Show();//llamar al formulario Nueva Cita
+            this.Close();//cerrar clase Informacion Cliente
+        }
+
+//*********************************************************************************************************
+        private void btnAgendaCita_Click_1(object sender, EventArgs e)//boton para ingresar a Agenda Cita
+        {
+            AgendaCita fmAC = new AgendaCita();
+            fmAC.Show();//llamar al formulario Agenda Cita
+            this.Close();//cerrar clase Informacion Cliente
+        }
+
+//*********************************************************************************************************
+        private void btnCajero_Click(object sender, EventArgs e)//boton para ingresar a Cajero
+        {
+            Cajero fmCajero = new Cajero();
+            fmCajero.Show();//llamar al formulario Cajero
+            this.Close();//cerrar clase Informacion Cliente
+        }
+
+//*********************************************************************************************************
+        private void btnMercancia_Click(object sender, EventArgs e)//boton para ingresar a Mercancia
+        {
+            Mercancia fmMercancia = new Mercancia();
+            fmMercancia.Show();//llamar al formulario Mercancia
+            this.Close();//cerrar clase Informacion Mercancia
+        }
+
+//*********************************************************************************************************
         public InformacionCliente( 
             /*informacion cliente*/String IdCliente, String NombreCliente, String ApellidoCliente, String CuentaBancoCliente, String telefonoCliente, 
             /*informacion mascota*/String NombreMascota, String EspecieMascota, String RazaMascota, String ColorPeloMascota, String SexoMascota
@@ -88,20 +121,5 @@ namespace Veterinaria3._0_1._0
             lblSexoMascota.Text = Arreglo_ColorPeloMascota[n];
         }
 
-//*********************************************************************************************************
-        private void btnNuevaCita_Click_1(object sender, EventArgs e)//boton Nueva Cita
-        {
-            NuevaCita fmNuevaCita = new NuevaCita();
-            fmNuevaCita.Show();//llamar al formulario Nueva Cita
-            this.Close();//cerrar clase Informacion Cliente
-        }
-
-//*********************************************************************************************************
-        private void btnAgendaCita_Click_1(object sender, EventArgs e)//boton Agenda Cita
-        {
-            AgendaCita fmAC = new AgendaCita();
-            fmAC.Show();//llamar al formulario Agenda Cita
-            this.Close();//cerrar clase Informacion Cliente
-        }
     }
 }

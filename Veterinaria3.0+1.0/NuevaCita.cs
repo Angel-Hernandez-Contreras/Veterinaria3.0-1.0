@@ -19,25 +19,6 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
-        private void btnAgregarCita_Click_1(object sender, EventArgs e)//boton Agregar Cita
-        {         
-            int n = dgvFichaCita.Rows.Add();
-            //-------------AGREGAR FICHA CITA
-            dgvFichaCita.Rows[n].Cells[0].Value = txtIdCliente.Text;
-            dgvFichaCita.Rows[n].Cells[1].Value = dtpFechaCita.Value.ToString() ;
-            dgvFichaCita.Rows[n].Cells[2].Value = txtHoraCita.Text;
-            dgvFichaCita.Rows[n].Cells[3].Value = cbNombreVeterinario.SelectedItem;
-
-            InformacionCliente fmInfCliente = new InformacionCliente(
-                /*informacion cliente*/txtIdCliente.Text, txtNombreCliente.Text, txtApellidoCliente.Text, txtCuentaBanco.Text, txtTelefonoCliente.Text, 
-                /*informacion mascota*/txtNombreMascota.Text, Convert.ToString(cbEspecieMascota.SelectedItem), Convert.ToString(cbRazaMascota.SelectedItem), txtColorPeloMascota.Text, rbMachoMascota.Checked ? "Macho" : "Hembra"
-                );
-
-            AgendaCita fmAgnCliente = new AgendaCita();
-            fmInfCliente.Show();
-        }
-
-//*********************************************************************************************************
         private void btnAgendaCita_Click(object sender, EventArgs e)//boton para ingresar a Agenda Cita
         {
             AgendaCita fmAgnCliente = new AgendaCita();
@@ -63,6 +44,33 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
+        private void btnCajero_Click(object sender, EventArgs e)//boton para ingresar a Cajero
+        {
+            Cajero fmCajero = new Cajero();
+            fmCajero.Show();//llamar al formulario Cajero
+            this.Close();//cerrar clase Cajero
+        }
+
+//*********************************************************************************************************
+        private void btnAgregarCita_Click_1(object sender, EventArgs e)//boton Agregar Cita
+        {         
+            int n = dgvFichaCita.Rows.Add();
+            //-------------AGREGAR FICHA CITA
+            dgvFichaCita.Rows[n].Cells[0].Value = txtIdCliente.Text;
+            dgvFichaCita.Rows[n].Cells[1].Value = dtpFechaCita.Value.ToString() ;
+            dgvFichaCita.Rows[n].Cells[2].Value = txtHoraCita.Text;
+            dgvFichaCita.Rows[n].Cells[3].Value = cbNombreVeterinario.SelectedItem;
+
+            InformacionCliente fmInfCliente = new InformacionCliente(
+                /*informacion cliente*/txtIdCliente.Text, txtNombreCliente.Text, txtApellidoCliente.Text, txtCuentaBanco.Text, txtTelefonoCliente.Text, 
+                /*informacion mascota*/txtNombreMascota.Text, Convert.ToString(cbEspecieMascota.SelectedItem), Convert.ToString(cbRazaMascota.SelectedItem), txtColorPeloMascota.Text, rbMachoMascota.Checked ? "Macho" : "Hembra"
+                );
+
+            AgendaCita fmAgnCliente = new AgendaCita();
+            fmInfCliente.Show();
+        }
+
+ //*********************************************************************************************************
         private void cbEspecieMascota_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbEspecieMascota.SelectedIndex+1)
@@ -87,5 +95,6 @@ namespace Veterinaria3._0_1._0
                     break;
             }
         }
+
     }
 }
