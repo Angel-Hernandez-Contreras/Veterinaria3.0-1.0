@@ -49,6 +49,7 @@ namespace Veterinaria3._0_1._0
             this.txtCodigoProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -255,11 +256,21 @@ namespace Veterinaria3._0_1._0
             this.label1.TabIndex = 0;
             this.label1.Text = "BUSCAR PRODUCTO";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(424, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(194, 15);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Los productos van desde el 120-124";
+            // 
             // Mercancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Mercancia";
@@ -268,6 +279,7 @@ namespace Veterinaria3._0_1._0
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -293,5 +305,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCodigoProducto;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
     }
 }
