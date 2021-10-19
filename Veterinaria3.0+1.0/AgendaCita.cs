@@ -42,8 +42,6 @@ namespace Veterinaria3._0_1._0
 
         private void btnCajero_Click(object sender, EventArgs e)
         {
-            inventario inventarios = new inventario();
-            inventarios.Show();
             this.Close();
         }
     }
