@@ -43,6 +43,27 @@ namespace Veterinaria3._0_1._0
             this.btnMercancia = new System.Windows.Forms.Button();
             this.btnAgendaCita = new System.Windows.Forms.Button();
             this.btnNuevaCita = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnMenosJeringas = new System.Windows.Forms.Button();
+            this.btnMenosVendajes = new System.Windows.Forms.Button();
+            this.btnMenosShampoo = new System.Windows.Forms.Button();
+            this.btnMenosDesinfectante = new System.Windows.Forms.Button();
+            this.btnMenosComida = new System.Windows.Forms.Button();
+            this.lblJeringas = new System.Windows.Forms.Label();
+            this.lblVendajes = new System.Windows.Forms.Label();
+            this.lblShampoo = new System.Windows.Forms.Label();
+            this.lblDesinfectante = new System.Windows.Forms.Label();
+            this.lblComida = new System.Windows.Forms.Label();
+            this.btnMasJeringas = new System.Windows.Forms.Button();
+            this.btnMasComida = new System.Windows.Forms.Button();
+            this.btnMasDesinfectante = new System.Windows.Forms.Button();
+            this.btnMasShampoo = new System.Windows.Forms.Button();
+            this.btnMasVendajes = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -199,14 +220,236 @@ namespace Veterinaria3._0_1._0
             this.btnNuevaCita.UseVisualStyleBackColor = false;
             this.btnNuevaCita.Click += new System.EventHandler(this.btnNuevaCita_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(193, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 15);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Jeringas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(193, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Vendajes";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(193, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 15);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Shampoo";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(193, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 15);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Desinfectante";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(193, 174);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 15);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Comida";
+            // 
+            // btnMenosJeringas
+            // 
+            this.btnMenosJeringas.Location = new System.Drawing.Point(361, 5);
+            this.btnMenosJeringas.Name = "btnMenosJeringas";
+            this.btnMenosJeringas.Size = new System.Drawing.Size(22, 23);
+            this.btnMenosJeringas.TabIndex = 13;
+            this.btnMenosJeringas.Text = "-";
+            this.btnMenosJeringas.UseVisualStyleBackColor = true;
+            this.btnMenosJeringas.Click += new System.EventHandler(this.btnMenosJeringas_Click);
+            // 
+            // btnMenosVendajes
+            // 
+            this.btnMenosVendajes.Location = new System.Drawing.Point(361, 45);
+            this.btnMenosVendajes.Name = "btnMenosVendajes";
+            this.btnMenosVendajes.Size = new System.Drawing.Size(22, 23);
+            this.btnMenosVendajes.TabIndex = 14;
+            this.btnMenosVendajes.Text = "-";
+            this.btnMenosVendajes.UseVisualStyleBackColor = true;
+            this.btnMenosVendajes.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnMenosShampoo
+            // 
+            this.btnMenosShampoo.Location = new System.Drawing.Point(361, 82);
+            this.btnMenosShampoo.Name = "btnMenosShampoo";
+            this.btnMenosShampoo.Size = new System.Drawing.Size(22, 23);
+            this.btnMenosShampoo.TabIndex = 15;
+            this.btnMenosShampoo.Text = "-";
+            this.btnMenosShampoo.UseVisualStyleBackColor = true;
+            this.btnMenosShampoo.Click += new System.EventHandler(this.btnMenosShampoo_Click);
+            // 
+            // btnMenosDesinfectante
+            // 
+            this.btnMenosDesinfectante.Location = new System.Drawing.Point(361, 124);
+            this.btnMenosDesinfectante.Name = "btnMenosDesinfectante";
+            this.btnMenosDesinfectante.Size = new System.Drawing.Size(22, 23);
+            this.btnMenosDesinfectante.TabIndex = 16;
+            this.btnMenosDesinfectante.Text = "-";
+            this.btnMenosDesinfectante.UseVisualStyleBackColor = true;
+            this.btnMenosDesinfectante.Click += new System.EventHandler(this.btnMenosDesinfectante_Click);
+            // 
+            // btnMenosComida
+            // 
+            this.btnMenosComida.Location = new System.Drawing.Point(361, 170);
+            this.btnMenosComida.Name = "btnMenosComida";
+            this.btnMenosComida.Size = new System.Drawing.Size(22, 23);
+            this.btnMenosComida.TabIndex = 17;
+            this.btnMenosComida.Text = "-";
+            this.btnMenosComida.UseVisualStyleBackColor = true;
+            this.btnMenosComida.Click += new System.EventHandler(this.btnMenosComida_Click);
+            // 
+            // lblJeringas
+            // 
+            this.lblJeringas.AutoSize = true;
+            this.lblJeringas.Location = new System.Drawing.Point(389, 9);
+            this.lblJeringas.Name = "lblJeringas";
+            this.lblJeringas.Size = new System.Drawing.Size(13, 15);
+            this.lblJeringas.TabIndex = 18;
+            this.lblJeringas.Text = "0";
+            // 
+            // lblVendajes
+            // 
+            this.lblVendajes.AutoSize = true;
+            this.lblVendajes.Location = new System.Drawing.Point(389, 49);
+            this.lblVendajes.Name = "lblVendajes";
+            this.lblVendajes.Size = new System.Drawing.Size(13, 15);
+            this.lblVendajes.TabIndex = 19;
+            this.lblVendajes.Text = "0";
+            // 
+            // lblShampoo
+            // 
+            this.lblShampoo.AutoSize = true;
+            this.lblShampoo.Location = new System.Drawing.Point(389, 86);
+            this.lblShampoo.Name = "lblShampoo";
+            this.lblShampoo.Size = new System.Drawing.Size(13, 15);
+            this.lblShampoo.TabIndex = 20;
+            this.lblShampoo.Text = "0";
+            // 
+            // lblDesinfectante
+            // 
+            this.lblDesinfectante.AutoSize = true;
+            this.lblDesinfectante.Location = new System.Drawing.Point(389, 128);
+            this.lblDesinfectante.Name = "lblDesinfectante";
+            this.lblDesinfectante.Size = new System.Drawing.Size(13, 15);
+            this.lblDesinfectante.TabIndex = 21;
+            this.lblDesinfectante.Text = "0";
+            // 
+            // lblComida
+            // 
+            this.lblComida.AutoSize = true;
+            this.lblComida.Location = new System.Drawing.Point(389, 174);
+            this.lblComida.Name = "lblComida";
+            this.lblComida.Size = new System.Drawing.Size(13, 15);
+            this.lblComida.TabIndex = 22;
+            this.lblComida.Text = "0";
+            // 
+            // btnMasJeringas
+            // 
+            this.btnMasJeringas.Location = new System.Drawing.Point(408, 5);
+            this.btnMasJeringas.Name = "btnMasJeringas";
+            this.btnMasJeringas.Size = new System.Drawing.Size(22, 23);
+            this.btnMasJeringas.TabIndex = 23;
+            this.btnMasJeringas.Text = "+";
+            this.btnMasJeringas.UseVisualStyleBackColor = true;
+            this.btnMasJeringas.Click += new System.EventHandler(this.btnMasJeringas_Click);
+            // 
+            // btnMasComida
+            // 
+            this.btnMasComida.Location = new System.Drawing.Point(408, 170);
+            this.btnMasComida.Name = "btnMasComida";
+            this.btnMasComida.Size = new System.Drawing.Size(22, 23);
+            this.btnMasComida.TabIndex = 24;
+            this.btnMasComida.Text = "+";
+            this.btnMasComida.UseVisualStyleBackColor = true;
+            this.btnMasComida.Click += new System.EventHandler(this.btnMasComida_Click);
+            // 
+            // btnMasDesinfectante
+            // 
+            this.btnMasDesinfectante.Location = new System.Drawing.Point(408, 124);
+            this.btnMasDesinfectante.Name = "btnMasDesinfectante";
+            this.btnMasDesinfectante.Size = new System.Drawing.Size(22, 23);
+            this.btnMasDesinfectante.TabIndex = 25;
+            this.btnMasDesinfectante.Text = "+";
+            this.btnMasDesinfectante.UseVisualStyleBackColor = true;
+            this.btnMasDesinfectante.Click += new System.EventHandler(this.btnMasDesinfectante_Click);
+            // 
+            // btnMasShampoo
+            // 
+            this.btnMasShampoo.Location = new System.Drawing.Point(408, 82);
+            this.btnMasShampoo.Name = "btnMasShampoo";
+            this.btnMasShampoo.Size = new System.Drawing.Size(22, 23);
+            this.btnMasShampoo.TabIndex = 26;
+            this.btnMasShampoo.Text = "+";
+            this.btnMasShampoo.UseVisualStyleBackColor = true;
+            this.btnMasShampoo.Click += new System.EventHandler(this.btnMasShampoo_Click);
+            // 
+            // btnMasVendajes
+            // 
+            this.btnMasVendajes.Location = new System.Drawing.Point(408, 45);
+            this.btnMasVendajes.Name = "btnMasVendajes";
+            this.btnMasVendajes.Size = new System.Drawing.Size(22, 23);
+            this.btnMasVendajes.TabIndex = 27;
+            this.btnMasVendajes.Text = "+";
+            this.btnMasVendajes.UseVisualStyleBackColor = true;
+            this.btnMasVendajes.Click += new System.EventHandler(this.btnMasVendajes_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(265, 221);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 28;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // Cajero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnMasVendajes);
+            this.Controls.Add(this.btnMasShampoo);
+            this.Controls.Add(this.btnMasDesinfectante);
+            this.Controls.Add(this.btnMasComida);
+            this.Controls.Add(this.btnMasJeringas);
+            this.Controls.Add(this.lblComida);
+            this.Controls.Add(this.lblDesinfectante);
+            this.Controls.Add(this.lblShampoo);
+            this.Controls.Add(this.lblVendajes);
+            this.Controls.Add(this.lblJeringas);
+            this.Controls.Add(this.btnMenosComida);
+            this.Controls.Add(this.btnMenosDesinfectante);
+            this.Controls.Add(this.btnMenosShampoo);
+            this.Controls.Add(this.btnMenosVendajes);
+            this.Controls.Add(this.btnMenosJeringas);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "Cajero";
-            this.Text = "Cajero";
+            this.Text = "0";
+            this.Load += new System.EventHandler(this.Cajero_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -215,6 +458,7 @@ namespace Veterinaria3._0_1._0
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -233,5 +477,26 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Button btnMercancia;
         private System.Windows.Forms.Button btnAgendaCita;
         private System.Windows.Forms.Button btnNuevaCita;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnMenosJeringas;
+        private System.Windows.Forms.Button btnMenosVendajes;
+        private System.Windows.Forms.Button btnMenosShampoo;
+        private System.Windows.Forms.Button btnMenosDesinfectante;
+        private System.Windows.Forms.Button btnMenosComida;
+        private System.Windows.Forms.Label lblJeringas;
+        private System.Windows.Forms.Label lblVendajes;
+        private System.Windows.Forms.Label lblShampoo;
+        private System.Windows.Forms.Label lblDesinfectante;
+        private System.Windows.Forms.Label lblComida;
+        private System.Windows.Forms.Button btnMasJeringas;
+        private System.Windows.Forms.Button btnMasComida;
+        private System.Windows.Forms.Button btnMasDesinfectante;
+        private System.Windows.Forms.Button btnMasShampoo;
+        private System.Windows.Forms.Button btnMasVendajes;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
