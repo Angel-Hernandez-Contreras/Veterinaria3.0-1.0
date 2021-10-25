@@ -150,10 +150,11 @@ namespace Veterinaria3._0_1._0
             this.panel1.Controls.Add(this.btnMercancia);
             this.panel1.Controls.Add(this.btnAgendaCita);
             this.panel1.Controls.Add(this.btnNuevaCita);
-            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(167, 448);
+            this.panel1.Size = new System.Drawing.Size(169, 448);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label20
             // 
@@ -189,7 +190,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 142);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 134);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(29, 21);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,7 +201,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 113);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 105);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(29, 21);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,7 +233,7 @@ namespace Veterinaria3._0_1._0
             // btnInformacionClientes
             // 
             this.btnInformacionClientes.BackColor = System.Drawing.Color.White;
-            this.btnInformacionClientes.Location = new System.Drawing.Point(36, 78);
+            this.btnInformacionClientes.Location = new System.Drawing.Point(38, 77);
             this.btnInformacionClientes.Name = "btnInformacionClientes";
             this.btnInformacionClientes.Size = new System.Drawing.Size(128, 23);
             this.btnInformacionClientes.TabIndex = 30;
@@ -243,7 +244,7 @@ namespace Veterinaria3._0_1._0
             // btnCajero
             // 
             this.btnCajero.BackColor = System.Drawing.Color.White;
-            this.btnCajero.Location = new System.Drawing.Point(36, 111);
+            this.btnCajero.Location = new System.Drawing.Point(38, 104);
             this.btnCajero.Name = "btnCajero";
             this.btnCajero.Size = new System.Drawing.Size(128, 23);
             this.btnCajero.TabIndex = 29;
@@ -254,7 +255,7 @@ namespace Veterinaria3._0_1._0
             // btnMercancia
             // 
             this.btnMercancia.BackColor = System.Drawing.Color.White;
-            this.btnMercancia.Location = new System.Drawing.Point(36, 140);
+            this.btnMercancia.Location = new System.Drawing.Point(38, 133);
             this.btnMercancia.Name = "btnMercancia";
             this.btnMercancia.Size = new System.Drawing.Size(128, 23);
             this.btnMercancia.TabIndex = 28;
@@ -265,7 +266,7 @@ namespace Veterinaria3._0_1._0
             // btnAgendaCita
             // 
             this.btnAgendaCita.BackColor = System.Drawing.Color.White;
-            this.btnAgendaCita.Location = new System.Drawing.Point(36, 49);
+            this.btnAgendaCita.Location = new System.Drawing.Point(38, 49);
             this.btnAgendaCita.Name = "btnAgendaCita";
             this.btnAgendaCita.Size = new System.Drawing.Size(128, 23);
             this.btnAgendaCita.TabIndex = 27;
@@ -276,7 +277,7 @@ namespace Veterinaria3._0_1._0
             // btnNuevaCita
             // 
             this.btnNuevaCita.BackColor = System.Drawing.Color.White;
-            this.btnNuevaCita.Location = new System.Drawing.Point(36, 23);
+            this.btnNuevaCita.Location = new System.Drawing.Point(38, 23);
             this.btnNuevaCita.Name = "btnNuevaCita";
             this.btnNuevaCita.Size = new System.Drawing.Size(128, 23);
             this.btnNuevaCita.TabIndex = 12;
@@ -441,7 +442,7 @@ namespace Veterinaria3._0_1._0
             this.pInformacionCliente.Controls.Add(this.label9);
             this.pInformacionCliente.Controls.Add(this.txtIdCliente);
             this.pInformacionCliente.Controls.Add(this.txtNombreCliente);
-            this.pInformacionCliente.Location = new System.Drawing.Point(174, 3);
+            this.pInformacionCliente.Location = new System.Drawing.Point(174, 0);
             this.pInformacionCliente.Name = "pInformacionCliente";
             this.pInformacionCliente.Size = new System.Drawing.Size(308, 185);
             this.pInformacionCliente.TabIndex = 8;
@@ -539,9 +540,9 @@ namespace Veterinaria3._0_1._0
             this.pCita.Controls.Add(this.txtHoraCita);
             this.pCita.Controls.Add(this.label15);
             this.pCita.Controls.Add(this.dtpFechaCita);
-            this.pCita.Location = new System.Drawing.Point(488, 3);
+            this.pCita.Location = new System.Drawing.Point(486, 0);
             this.pCita.Name = "pCita";
-            this.pCita.Size = new System.Drawing.Size(339, 185);
+            this.pCita.Size = new System.Drawing.Size(344, 185);
             this.pCita.TabIndex = 9;
             // 
             // label19

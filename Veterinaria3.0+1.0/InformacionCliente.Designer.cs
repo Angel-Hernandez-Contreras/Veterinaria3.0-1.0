@@ -449,7 +449,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(3, 142);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 138);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(29, 21);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -460,7 +460,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 113);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 109);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(29, 21);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -502,7 +502,7 @@ namespace Veterinaria3._0_1._0
             // btnCajero
             // 
             this.btnCajero.BackColor = System.Drawing.Color.White;
-            this.btnCajero.Location = new System.Drawing.Point(36, 111);
+            this.btnCajero.Location = new System.Drawing.Point(36, 107);
             this.btnCajero.Name = "btnCajero";
             this.btnCajero.Size = new System.Drawing.Size(128, 23);
             this.btnCajero.TabIndex = 29;
@@ -513,7 +513,7 @@ namespace Veterinaria3._0_1._0
             // btnMercancia
             // 
             this.btnMercancia.BackColor = System.Drawing.Color.White;
-            this.btnMercancia.Location = new System.Drawing.Point(36, 140);
+            this.btnMercancia.Location = new System.Drawing.Point(36, 136);
             this.btnMercancia.Name = "btnMercancia";
             this.btnMercancia.Size = new System.Drawing.Size(128, 23);
             this.btnMercancia.TabIndex = 28;

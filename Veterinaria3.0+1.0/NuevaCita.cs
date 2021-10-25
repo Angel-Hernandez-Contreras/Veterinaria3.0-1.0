@@ -96,5 +96,9 @@ namespace Veterinaria3._0_1._0
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
