@@ -59,5 +59,15 @@ namespace Veterinaria3._0_1._0.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NuevaCita {
+            get {
+                object obj = ResourceManager.GetObject("NuevaCita", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

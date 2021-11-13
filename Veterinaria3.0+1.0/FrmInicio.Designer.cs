@@ -1,7 +1,7 @@
 ﻿
 namespace Veterinaria3._0_1._0
 {
-    partial class Inicio
+    partial class FrmInicio
     {
         /// <summary>
         /// Required designer variable.
