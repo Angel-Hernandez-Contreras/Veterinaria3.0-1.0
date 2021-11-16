@@ -30,12 +30,7 @@ namespace Veterinaria3._0_1._0
         //*********************************************************************************************************
         private void AgendaCita_Load(object sender, EventArgs e)//carga las citas al abrir el formulario
         {
-            /*using (var context = new ApplicationDbContext())
-            {
-                var cita = context.Cita.ToList();
-                dgvAgendaCita.DataSource = cita;
-
-            }*/
+            TodosCita();
         }
 
         //*********************************************************************************************************
@@ -66,10 +61,12 @@ namespace Veterinaria3._0_1._0
                     }
                 }
             }
+
+            TodosCita();
         }
 
 //********************************************************************************************************* 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)//boton para elñiminar cita
         {
             using (var context = new ApplicationDbContext())
             {
@@ -84,12 +81,25 @@ namespace Veterinaria3._0_1._0
                     }
                 }
             }
+
+            TodosCita();
         }
 
 //********************************************************************************************************* 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)//boton para limpiar
         {
             txtBuscar.Text = "";
+        }
+
+//********************************************************************************************************* 
+        private void TodosCita()//metodo para mostrar la lista de las citas
+        {
+            /*using (var context = new ApplicationDbContext())
+           {
+               var cita = context.Cita.ToList();
+               dgvAgendaCita.DataSource = cita;
+
+           }*/
         }
     }
 }

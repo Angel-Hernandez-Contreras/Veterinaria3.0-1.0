@@ -63,6 +63,8 @@ namespace Veterinaria3._0_1._0
 
                 context.SaveChanges();
             }
+
+            TodosMercancia();
         }
 
 //*********************************************************************************************************
@@ -84,6 +86,8 @@ namespace Veterinaria3._0_1._0
                     }
                 }
             }
+
+            TodosMercancia();
         }
 
 //*********************************************************************************************************
@@ -102,6 +106,8 @@ namespace Veterinaria3._0_1._0
                     }
                 }
             }
+
+            TodosMercancia();
         }
 
 //*********************************************************************************************************
@@ -115,5 +121,16 @@ namespace Veterinaria3._0_1._0
             txtAgregarCantidadProducto.Text = "";
             txtAgregarCantidadProducto.Text = "";
         }
+
+//*********************************************************************************************************
+        private void TodosMercancia()
+        {
+            /*using (var context = new ApplicationDbContext())
+                {
+                    var mercancia = context.Mercancia.ToList();
+                    dgvMercancia.DataSource = mercancia;
+                }*/
+        }
+
     }
 }

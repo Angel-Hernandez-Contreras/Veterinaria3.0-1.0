@@ -106,7 +106,6 @@ namespace Veterinaria3._0_1._0
             this.label11.Size = new System.Drawing.Size(150, 15);
             this.label11.TabIndex = 29;
             this.label11.Text = "Mediante Nombre Cliente: ";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // txtBuscarNombre
             // 
@@ -215,9 +214,9 @@ namespace Veterinaria3._0_1._0
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 52);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 15);
+            this.label5.Size = new System.Drawing.Size(111, 15);
             this.label5.TabIndex = 40;
-            this.label5.Text = "el producto a Eliminar";
+            this.label5.Text = "el Cliente a Eliminar";
             // 
             // label10
             // 
@@ -235,9 +234,9 @@ namespace Veterinaria3._0_1._0
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(22, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 15);
+            this.label4.Size = new System.Drawing.Size(107, 15);
             this.label4.TabIndex = 0;
-            this.label4.Text = "ELIMINAR PRODUCTO";
+            this.label4.Text = "ELIMINAR CLIENTE";
             // 
             // FrmInformacionCliente
             // 
