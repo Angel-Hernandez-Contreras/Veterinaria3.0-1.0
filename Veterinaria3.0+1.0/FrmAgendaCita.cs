@@ -38,7 +38,7 @@ namespace Veterinaria3._0_1._0
         {
             using (var context = new ApplicationDbContext())
             {
-                var cita = context.Cita.Where(x => x.IdCliente.Contains(txtBuscar.Text)).ToList();
+                var cita = context.Cita.Where(x => x.NombreCliente.Contains(txtBuscar.Text)).ToList();
                 dgvAgendaCita.DataSource = cita;
             }
         }
@@ -54,9 +54,9 @@ namespace Veterinaria3._0_1._0
                     var cita = context.Cita.First(x => x.Id == id);
                     if (cita != null)
                     {
-                        cita.FechaCita = Convert.ToString(dtpFechaCita.Value);
-                        cita.HoraCita = Convert.ToString(cbHoraCita.SelectedItem);
-                        cita.NombreVeterinario = Convert.ToString(cbNombreVeterinario.SelectedItem);
+                        cita.FechaCita = Convert.ToString(dtpFechaCita.Value).ToUpper();
+                        cita.HoraCita = Convert.ToString(cbHoraCita.SelectedItem).ToUpper();
+                        cita.NombreVeterinario = Convert.ToString(cbNombreVeterinario.SelectedItem).ToUpper();
                         context.SaveChanges();
                     }
                 }
@@ -100,6 +100,12 @@ namespace Veterinaria3._0_1._0
                dgvAgendaCita.DataSource = cita;
 
            }*/
+        }
+
+//********************************************************************************************************* 
+        private void dgvAgendaCita_CellContentClick(object sender, DataGridViewCellEventArgs e)//metodo para poder seleccionar una cita en el DataGridView
+        {
+            id = Convert.ToInt32(dgvAgendaCita.CurrentRow.Cells[0].Value.ToString());          
         }
     }
 }

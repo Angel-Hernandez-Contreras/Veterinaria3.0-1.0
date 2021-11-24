@@ -33,8 +33,8 @@ namespace Veterinaria3._0_1._0
         {
             using (var context = new ApplicationDbContext())
             {
-                var codigo = context.Mercancia.Where(x => x.Codigo.Contains(txtBuscarCodigoProducto.Text)).ToList();
-                dgvMercancia.DataSource = codigo;
+                /*var codigo = context.Mercancia.First(x => x.Id == (txtBuscarCodigoProducto.Text)).ToList();
+                dgvMercancia.DataSource = codigo;*/
 
             }
         }
@@ -44,7 +44,7 @@ namespace Veterinaria3._0_1._0
         {
             using (var context = new ApplicationDbContext())
             {
-                var nombre = context.Mercancia.Where(x => x.Codigo.Contains(txtBuscarNombreProducto.Text)).ToList();
+                var nombre = context.Mercancia.Where(x => x.Nombre.Contains(txtBuscarNombreProducto.Text.ToUpper())).ToList();
                 dgvMercancia.DataSource = nombre;
 
             }
@@ -56,10 +56,9 @@ namespace Veterinaria3._0_1._0
             using (var context = new ApplicationDbContext())
             {
                 var agregar = new Mercancia();
-                agregar.Codigo = txtAgregarCodigoProducto.Text;
-                agregar.Nombre = txtAgregarNombreProducto.Text;
-                agregar.Cantidad = Convert.ToInt32(txtAgregarCantidadProducto.Text);
-                agregar.Precio = Convert.ToInt32(txtAgregarPrecioProducto.Text);
+                agregar.Nombre = txtAgregarNombreProducto.Text.ToUpper();
+                agregar.Cantidad = Convert.ToInt32(txtAgregarCantidadProducto.Text.ToUpper());
+                agregar.Precio = Convert.ToInt32(txtAgregarPrecioProducto.Text.ToUpper());
 
                 context.SaveChanges();
             }
@@ -78,10 +77,9 @@ namespace Veterinaria3._0_1._0
                     var mercancia = context.Mercancia.First(x => x.Id == id);
                     if (mercancia != null)
                     {
-                        mercancia.Codigo = txtAgregarCodigoProducto.Text;
-                        mercancia.Nombre = txtAgregarNombreProducto.Text;
-                        mercancia.Cantidad = Convert.ToInt32(txtAgregarCantidadProducto.Text);
-                        mercancia.Precio = Convert.ToInt32(txtAgregarPrecioProducto.Text);
+                        mercancia.Nombre = txtAgregarNombreProducto.Text.ToUpper();
+                        mercancia.Cantidad = Convert.ToInt32(txtAgregarCantidadProducto.Text.ToUpper());
+                        mercancia.Precio = Convert.ToDouble(txtAgregarPrecioProducto.Text.ToUpper());
                         context.SaveChanges();
                     }
                 }
@@ -113,10 +111,9 @@ namespace Veterinaria3._0_1._0
 //*********************************************************************************************************
         private void btnLimpiar_Click(object sender, EventArgs e)//boton par alimpiar
         {
-            txtBuscarCodigoProducto.Text = "";
+            txtBuscarIdProducto.Text = "";
             txtAgregarNombreProducto.Text = "";
 
-            txtAgregarCodigoProducto.Text = "";
             txtAgregarNombreProducto.Text = "";
             txtAgregarCantidadProducto.Text = "";
             txtAgregarCantidadProducto.Text = "";
@@ -132,5 +129,14 @@ namespace Veterinaria3._0_1._0
                 }*/
         }
 
+//*********************************************************************************************************
+        private void dgvMercancia_CellContentClick(object sender, DataGridViewCellEventArgs e)//metodo para poder seleccionar una cita en el DataGridView
+        {
+            id = Convert.ToInt32(dgvMercancia.CurrentRow.Cells[0].Value.ToString());
+
+            txtAgregarNombreProducto.Text = dgvMercancia.CurrentRow.Cells[2].Value.ToString();
+            txtAgregarCantidadProducto.Text = dgvMercancia.CurrentRow.Cells[3].Value.ToString();
+            txtAgregarPrecioProducto.Text = dgvMercancia.CurrentRow.Cells[4].Value.ToString();
+        }
     }
 }

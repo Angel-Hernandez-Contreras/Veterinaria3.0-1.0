@@ -31,33 +31,31 @@ namespace Veterinaria3._0_1._0
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvMercancia = new System.Windows.Forms.DataGridView();
-            this.txtBuscarCodigoProducto = new System.Windows.Forms.TextBox();
+            this.txtBuscarIdProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtBuscarNombreProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtAgregarPrecioProducto = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtAgregarCantidadProducto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAgregarNombreProducto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtAgregarCodigoProducto = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMercancia)).BeginInit();
             this.panel1.SuspendLayout();
@@ -82,14 +80,15 @@ namespace Veterinaria3._0_1._0
             this.dgvMercancia.RowTemplate.Height = 25;
             this.dgvMercancia.Size = new System.Drawing.Size(449, 445);
             this.dgvMercancia.TabIndex = 0;
+            this.dgvMercancia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMercancia_CellContentClick);
             // 
-            // txtBuscarCodigoProducto
+            // txtBuscarIdProducto
             // 
-            this.txtBuscarCodigoProducto.Location = new System.Drawing.Point(4, 66);
-            this.txtBuscarCodigoProducto.Name = "txtBuscarCodigoProducto";
-            this.txtBuscarCodigoProducto.Size = new System.Drawing.Size(158, 23);
-            this.txtBuscarCodigoProducto.TabIndex = 2;
-            this.txtBuscarCodigoProducto.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
+            this.txtBuscarIdProducto.Location = new System.Drawing.Point(4, 66);
+            this.txtBuscarIdProducto.Name = "txtBuscarIdProducto";
+            this.txtBuscarIdProducto.Size = new System.Drawing.Size(158, 23);
+            this.txtBuscarIdProducto.TabIndex = 2;
+            this.txtBuscarIdProducto.TextChanged += new System.EventHandler(this.txtCodigoProducto_TextChanged);
             // 
             // label2
             // 
@@ -97,9 +96,9 @@ namespace Veterinaria3._0_1._0
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(4, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 15);
+            this.label2.Size = new System.Drawing.Size(72, 15);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Codigo Producto:";
+            this.label2.Text = "Id Producto:";
             // 
             // label1
             // 
@@ -117,7 +116,7 @@ namespace Veterinaria3._0_1._0
             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel1.Controls.Add(this.btnLimpiar);
             this.panel1.Controls.Add(this.txtBuscarNombreProducto);
-            this.panel1.Controls.Add(this.txtBuscarCodigoProducto);
+            this.panel1.Controls.Add(this.txtBuscarIdProducto);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -125,6 +124,17 @@ namespace Veterinaria3._0_1._0
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(167, 177);
             this.panel1.TabIndex = 10;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(3, 140);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(158, 23);
+            this.btnLimpiar.TabIndex = 13;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // txtBuscarNombreProducto
             // 
@@ -171,163 +181,11 @@ namespace Veterinaria3._0_1._0
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.txtAgregarNombreProducto);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.txtAgregarCodigoProducto);
-            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(634, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(167, 448);
             this.panel3.TabIndex = 13;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(4, 232);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(160, 23);
-            this.btnAgregar.TabIndex = 10;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txtAgregarPrecioProducto
-            // 
-            this.txtAgregarPrecioProducto.Location = new System.Drawing.Point(4, 202);
-            this.txtAgregarPrecioProducto.Name = "txtAgregarPrecioProducto";
-            this.txtAgregarPrecioProducto.Size = new System.Drawing.Size(160, 23);
-            this.txtAgregarPrecioProducto.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(4, 183);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 15);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Precio Producto:";
-            // 
-            // txtAgregarCantidadProducto
-            // 
-            this.txtAgregarCantidadProducto.Location = new System.Drawing.Point(4, 157);
-            this.txtAgregarCantidadProducto.Name = "txtAgregarCantidadProducto";
-            this.txtAgregarCantidadProducto.Size = new System.Drawing.Size(160, 23);
-            this.txtAgregarCantidadProducto.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(4, 138);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 15);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Cantidad Producto:";
-            // 
-            // txtAgregarNombreProducto
-            // 
-            this.txtAgregarNombreProducto.Location = new System.Drawing.Point(4, 112);
-            this.txtAgregarNombreProducto.Name = "txtAgregarNombreProducto";
-            this.txtAgregarNombreProducto.Size = new System.Drawing.Size(160, 23);
-            this.txtAgregarNombreProducto.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(4, 93);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 15);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Nombre Producto:";
-            // 
-            // txtAgregarCodigoProducto
-            // 
-            this.txtAgregarCodigoProducto.Location = new System.Drawing.Point(4, 67);
-            this.txtAgregarCodigoProducto.Name = "txtAgregarCodigoProducto";
-            this.txtAgregarCodigoProducto.Size = new System.Drawing.Size(160, 23);
-            this.txtAgregarCodigoProducto.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(4, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 15);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Codigo Producto:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(28, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "AGREGAR/ELIMINAR";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(4, 413);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(160, 23);
-            this.btnEliminar.TabIndex = 11;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(4, 380);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(120, 15);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Selecciona en la tabla";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(4, 395);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 15);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "el producto a Eliminar";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(15, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 15);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "/MODIFICAR PRODUCTO";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel5.Controls.Add(this.btnRegresar);
-            this.panel5.Location = new System.Drawing.Point(0, 183);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(167, 268);
-            this.panel5.TabIndex = 15;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(4, 321);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(160, 23);
-            this.btnModificar.TabIndex = 14;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // label12
             // 
@@ -349,16 +207,138 @@ namespace Veterinaria3._0_1._0
             this.label13.TabIndex = 15;
             this.label13.Text = "Selecciona en la tabla";
             // 
-            // btnLimpiar
+            // btnModificar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(3, 140);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(158, 23);
-            this.btnLimpiar.TabIndex = 13;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnModificar.BackColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(4, 321);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(160, 23);
+            this.btnModificar.TabIndex = 14;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(4, 395);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(123, 15);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "el producto a Eliminar";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(15, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 15);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "/MODIFICAR PRODUCTO";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(4, 205);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(160, 23);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtAgregarPrecioProducto
+            // 
+            this.txtAgregarPrecioProducto.Location = new System.Drawing.Point(4, 175);
+            this.txtAgregarPrecioProducto.Name = "txtAgregarPrecioProducto";
+            this.txtAgregarPrecioProducto.Size = new System.Drawing.Size(160, 23);
+            this.txtAgregarPrecioProducto.TabIndex = 9;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(4, 380);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(120, 15);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Selecciona en la tabla";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(4, 413);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(160, 23);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(4, 156);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(95, 15);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Precio Producto:";
+            // 
+            // txtAgregarCantidadProducto
+            // 
+            this.txtAgregarCantidadProducto.Location = new System.Drawing.Point(4, 130);
+            this.txtAgregarCantidadProducto.Name = "txtAgregarCantidadProducto";
+            this.txtAgregarCantidadProducto.Size = new System.Drawing.Size(160, 23);
+            this.txtAgregarCantidadProducto.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(4, 111);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 15);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Cantidad Producto:";
+            // 
+            // txtAgregarNombreProducto
+            // 
+            this.txtAgregarNombreProducto.Location = new System.Drawing.Point(4, 85);
+            this.txtAgregarNombreProducto.Name = "txtAgregarNombreProducto";
+            this.txtAgregarNombreProducto.Size = new System.Drawing.Size(160, 23);
+            this.txtAgregarNombreProducto.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(4, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(106, 15);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Nombre Producto:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(28, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "AGREGAR/ELIMINAR";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel5.Controls.Add(this.btnRegresar);
+            this.panel5.Location = new System.Drawing.Point(0, 183);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(167, 268);
+            this.panel5.TabIndex = 15;
             // 
             // FrmMercancia
             // 
@@ -386,7 +366,7 @@ namespace Veterinaria3._0_1._0
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBuscarCodigoProducto;
+        private System.Windows.Forms.TextBox txtBuscarIdProducto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegresar;
@@ -394,8 +374,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.TextBox txtBuscarNombreProducto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtAgregarCodigoProducto;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAgregarCantidadProducto;
         private System.Windows.Forms.Label label8;

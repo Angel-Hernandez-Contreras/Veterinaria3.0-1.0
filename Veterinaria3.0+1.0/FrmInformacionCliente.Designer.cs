@@ -74,6 +74,7 @@ namespace Veterinaria3._0_1._0
             this.dgvCliente.RowTemplate.Height = 25;
             this.dgvCliente.Size = new System.Drawing.Size(297, 404);
             this.dgvCliente.TabIndex = 37;
+            this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
             // label1
             // 

@@ -9,7 +9,6 @@ namespace Veterinaria3._0_1._0.Models
     class Cliente
     {
         public int Id { get; set; }
-        public string IdCliente { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Sexo { get; set; }

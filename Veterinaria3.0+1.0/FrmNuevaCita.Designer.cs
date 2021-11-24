@@ -32,7 +32,6 @@ namespace Veterinaria3._0_1._0
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreMascota = new System.Windows.Forms.TextBox();
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.pInformacionMascota = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.clbVacunacionesMascota = new System.Windows.Forms.CheckedListBox();
@@ -53,7 +52,6 @@ namespace Veterinaria3._0_1._0
             this.label11 = new System.Windows.Forms.Label();
             this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
             this.txtApellidoCliente = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pCita = new System.Windows.Forms.Panel();
             this.cbHoraCita = new System.Windows.Forms.ComboBox();
@@ -102,17 +100,10 @@ namespace Veterinaria3._0_1._0
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(115, 47);
+            this.txtNombreCliente.Location = new System.Drawing.Point(115, 44);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(190, 23);
             this.txtNombreCliente.TabIndex = 4;
-            // 
-            // txtIdCliente
-            // 
-            this.txtIdCliente.Location = new System.Drawing.Point(115, 18);
-            this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Size = new System.Drawing.Size(190, 23);
-            this.txtIdCliente.TabIndex = 5;
             // 
             // pInformacionMascota
             // 
@@ -228,10 +219,10 @@ namespace Veterinaria3._0_1._0
             // 
             this.cbEspecieMascota.FormattingEnabled = true;
             this.cbEspecieMascota.Items.AddRange(new object[] {
-            "Gato",
-            "Perro",
-            "Hamster",
-            "pato"});
+            "GATO",
+            "PERRO",
+            "HAMSTER",
+            "PATO"});
             this.cbEspecieMascota.Location = new System.Drawing.Point(115, 47);
             this.cbEspecieMascota.Name = "cbEspecieMascota";
             this.cbEspecieMascota.Size = new System.Drawing.Size(190, 23);
@@ -249,9 +240,7 @@ namespace Veterinaria3._0_1._0
             this.pInformacionCliente.Controls.Add(this.label11);
             this.pInformacionCliente.Controls.Add(this.txtTelefonoCliente);
             this.pInformacionCliente.Controls.Add(this.txtApellidoCliente);
-            this.pInformacionCliente.Controls.Add(this.label10);
             this.pInformacionCliente.Controls.Add(this.label9);
-            this.pInformacionCliente.Controls.Add(this.txtIdCliente);
             this.pInformacionCliente.Controls.Add(this.txtNombreCliente);
             this.pInformacionCliente.Location = new System.Drawing.Point(174, 0);
             this.pInformacionCliente.Name = "pInformacionCliente";
@@ -262,7 +251,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.rbFemenino.AutoSize = true;
             this.rbFemenino.BackColor = System.Drawing.Color.White;
-            this.rbFemenino.Location = new System.Drawing.Point(202, 107);
+            this.rbFemenino.Location = new System.Drawing.Point(201, 106);
             this.rbFemenino.Name = "rbFemenino";
             this.rbFemenino.Size = new System.Drawing.Size(78, 19);
             this.rbFemenino.TabIndex = 30;
@@ -275,7 +264,7 @@ namespace Veterinaria3._0_1._0
             this.rbMasculino.AutoSize = true;
             this.rbMasculino.BackColor = System.Drawing.Color.White;
             this.rbMasculino.Checked = true;
-            this.rbMasculino.Location = new System.Drawing.Point(115, 108);
+            this.rbMasculino.Location = new System.Drawing.Point(115, 105);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(80, 19);
             this.rbMasculino.TabIndex = 29;
@@ -287,7 +276,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(5, 137);
+            this.label14.Location = new System.Drawing.Point(5, 134);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(52, 15);
             this.label14.TabIndex = 28;
@@ -297,7 +286,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(5, 108);
+            this.label13.Location = new System.Drawing.Point(5, 105);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 15);
             this.label13.TabIndex = 27;
@@ -307,7 +296,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(5, 79);
+            this.label12.Location = new System.Drawing.Point(5, 76);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 15);
             this.label12.TabIndex = 26;
@@ -317,7 +306,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(5, 50);
+            this.label11.Location = new System.Drawing.Point(5, 47);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 15);
             this.label11.TabIndex = 25;
@@ -325,27 +314,17 @@ namespace Veterinaria3._0_1._0
             // 
             // txtTelefonoCliente
             // 
-            this.txtTelefonoCliente.Location = new System.Drawing.Point(115, 134);
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(115, 131);
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
             this.txtTelefonoCliente.Size = new System.Drawing.Size(190, 23);
             this.txtTelefonoCliente.TabIndex = 24;
             // 
             // txtApellidoCliente
             // 
-            this.txtApellidoCliente.Location = new System.Drawing.Point(115, 76);
+            this.txtApellidoCliente.Location = new System.Drawing.Point(115, 73);
             this.txtApellidoCliente.Name = "txtApellidoCliente";
             this.txtApellidoCliente.Size = new System.Drawing.Size(190, 23);
             this.txtApellidoCliente.TabIndex = 22;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(5, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 15);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Id Cliente";
             // 
             // label9
             // 
@@ -582,7 +561,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombreMascota;
         private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Panel pInformacionMascota;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckedListBox clbVacunacionesMascota;
@@ -601,7 +579,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTelefonoCliente;
         private System.Windows.Forms.TextBox txtApellidoCliente;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel pCita;
         private System.Windows.Forms.Label label18;

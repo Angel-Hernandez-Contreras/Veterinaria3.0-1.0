@@ -41,7 +41,7 @@ namespace Veterinaria3._0_1._0
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtCantidadProducto = new System.Windows.Forms.TextBox();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.txtCodigoProducto = new System.Windows.Forms.TextBox();
+            this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,11 +52,14 @@ namespace Veterinaria3._0_1._0
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnModificarCantidad = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTicket)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -75,7 +78,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(201, 0);
+            this.label2.Location = new System.Drawing.Point(192, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 3;
@@ -138,7 +141,7 @@ namespace Veterinaria3._0_1._0
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel3.Controls.Add(this.txtCantidadProducto);
             this.panel3.Controls.Add(this.txtNombreProducto);
-            this.panel3.Controls.Add(this.txtCodigoProducto);
+            this.panel3.Controls.Add(this.txtIdProducto);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label6);
@@ -162,12 +165,12 @@ namespace Veterinaria3._0_1._0
             this.txtNombreProducto.Size = new System.Drawing.Size(130, 23);
             this.txtNombreProducto.TabIndex = 8;
             // 
-            // txtCodigoProducto
+            // txtIdProducto
             // 
-            this.txtCodigoProducto.Location = new System.Drawing.Point(136, 49);
-            this.txtCodigoProducto.Name = "txtCodigoProducto";
-            this.txtCodigoProducto.Size = new System.Drawing.Size(130, 23);
-            this.txtCodigoProducto.TabIndex = 7;
+            this.txtIdProducto.Location = new System.Drawing.Point(136, 49);
+            this.txtIdProducto.Name = "txtIdProducto";
+            this.txtIdProducto.Size = new System.Drawing.Size(130, 23);
+            this.txtIdProducto.TabIndex = 7;
             // 
             // label5
             // 
@@ -205,14 +208,14 @@ namespace Veterinaria3._0_1._0
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(4, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 15);
+            this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Codigo Producto";
+            this.label3.Text = "Id Producto";
             // 
             // btnTerminarProceso
             // 
             this.btnTerminarProceso.BackColor = System.Drawing.Color.White;
-            this.btnTerminarProceso.Location = new System.Drawing.Point(3, 198);
+            this.btnTerminarProceso.Location = new System.Drawing.Point(3, 59);
             this.btnTerminarProceso.Name = "btnTerminarProceso";
             this.btnTerminarProceso.Size = new System.Drawing.Size(263, 23);
             this.btnTerminarProceso.TabIndex = 2;
@@ -223,7 +226,7 @@ namespace Veterinaria3._0_1._0
             // btnEliminarProducto
             // 
             this.btnEliminarProducto.BackColor = System.Drawing.Color.White;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(4, 117);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(4, 80);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(263, 23);
             this.btnEliminarProducto.TabIndex = 1;
@@ -265,13 +268,33 @@ namespace Veterinaria3._0_1._0
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel4.Controls.Add(this.btnModificarCantidad);
             this.panel4.Controls.Add(this.btnAgregarProducto);
-            this.panel4.Controls.Add(this.btnTerminarProceso);
             this.panel4.Controls.Add(this.btnEliminarProducto);
             this.panel4.Location = new System.Drawing.Point(85, 221);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(270, 231);
+            this.panel4.Size = new System.Drawing.Size(270, 132);
             this.panel4.TabIndex = 11;
+            // 
+            // btnModificarCantidad
+            // 
+            this.btnModificarCantidad.BackColor = System.Drawing.Color.White;
+            this.btnModificarCantidad.Location = new System.Drawing.Point(3, 51);
+            this.btnModificarCantidad.Name = "btnModificarCantidad";
+            this.btnModificarCantidad.Size = new System.Drawing.Size(262, 23);
+            this.btnModificarCantidad.TabIndex = 3;
+            this.btnModificarCantidad.Text = "Modificar Cantidad";
+            this.btnModificarCantidad.UseVisualStyleBackColor = false;
+            this.btnModificarCantidad.Click += new System.EventHandler(this.btnModificarCantidad_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel5.Controls.Add(this.btnTerminarProceso);
+            this.panel5.Location = new System.Drawing.Point(85, 360);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(270, 92);
+            this.panel5.TabIndex = 12;
             // 
             // FrmCajero
             // 
@@ -279,6 +302,7 @@ namespace Veterinaria3._0_1._0
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -292,6 +316,7 @@ namespace Veterinaria3._0_1._0
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -305,7 +330,7 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtCantidadProducto;
         private System.Windows.Forms.TextBox txtNombreProducto;
-        private System.Windows.Forms.TextBox txtCodigoProducto;
+        private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -320,5 +345,7 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnModificarCantidad;
+        private System.Windows.Forms.Panel panel5;
     }
 }

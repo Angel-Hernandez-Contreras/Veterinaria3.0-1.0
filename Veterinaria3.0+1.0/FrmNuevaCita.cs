@@ -66,27 +66,33 @@ namespace Veterinaria3._0_1._0
             using (var context = new ApplicationDbContext())
             {
                 var agregarCliente = new Cliente();
-                agregarCliente.IdCliente = txtIdCliente.Text;
-                agregarCliente.Nombre = txtNombreCliente.Text;
-                agregarCliente.Apellido = txtApellidoCliente.Text;
-                agregarCliente.Sexo = rbMasculino.Checked ? "Masculino" : "Femenino";
-                agregarCliente.Telefono = Convert.ToInt32(txtTelefonoCliente.Text);
+                agregarCliente.Nombre = txtNombreCliente.Text.ToUpper();
+                agregarCliente.Apellido = txtApellidoCliente.Text.ToUpper();
+                agregarCliente.Sexo = rbMasculino.Checked ? "MASCULINO" : "FEMENINO";
+                agregarCliente.Telefono = Convert.ToInt32(txtTelefonoCliente.Text.ToUpper());
                 context.Cliente.Add(agregarCliente);
 
                 var agregarMascota = new Mascota();
-                agregarMascota.NombreCliente = txtNombreCliente.Text;
-                agregarMascota.NombreMascota = txtNombreMascota.Text;
-                agregarMascota.Especie = Convert.ToString(cbEspecieMascota.SelectedItem);
-                agregarMascota.ColorPelo = txtColorPeloMascota.Text;
-                agregarMascota.Sexo = rbMachoMascota.Checked ? "Macho" : "Femenino";
+                agregarMascota.NombreCliente = txtNombreCliente.Text.ToUpper();
+                agregarMascota.NombreMascota = txtNombreMascota.Text.ToUpper();
+                agregarMascota.Especie = Convert.ToString(cbEspecieMascota.SelectedItem).ToUpper();
+                agregarMascota.ColorPelo = txtColorPeloMascota.Text.ToUpper();
+                agregarMascota.Sexo = rbMachoMascota.Checked ? "MACHO" : "HEMBRA";
                 context.Mascota.Add(agregarMascota);
+
+                var agregarCita = new Cita();
+                agregarCita.NombreCliente = txtNombreCliente.Text.ToUpper();
+                agregarCita.FechaCita = Convert.ToString(dtpFechaCita.Value).ToUpper();
+                agregarCita.HoraCita = Convert.ToString(cbHoraCita.SelectedItem).ToUpper();
+                agregarCita.NombreVeterinario = Convert.ToString(cbNombreVeterinario.SelectedItem).ToUpper();
 
                 context.SaveChanges();
 
-                dgvFichaCita.CurrentRow.Cells[0].Value = Convert.ToString(txtIdCliente.Text);
-                dgvFichaCita.CurrentRow.Cells[1].Value = dtpFechaCita.Value;
-                dgvFichaCita.CurrentRow.Cells[2].Value = Convert.ToString(cbHoraCita.SelectedItem);
-                dgvFichaCita.CurrentRow.Cells[3].Value = Convert.ToString(cbNombreVeterinario.SelectedItem);
+                int n = dgvFichaCita.Rows.Add();
+                dgvFichaCita.CurrentRow.Cells[0].Value = txtNombreCliente.Text.ToUpper();
+                dgvFichaCita.CurrentRow.Cells[1].Value = Convert.ToString(dtpFechaCita.Value).ToUpper();
+                dgvFichaCita.CurrentRow.Cells[2].Value = Convert.ToString(cbHoraCita.SelectedItem).ToUpper();
+                dgvFichaCita.CurrentRow.Cells[3].Value = Convert.ToString(cbNombreVeterinario.SelectedItem).ToUpper();
 
             }
         }
@@ -94,7 +100,6 @@ namespace Veterinaria3._0_1._0
 //*********************************************************************************************************
         private void Limpiar()//metodo para limpiar el formulario Nueva Cita
         {
-            txtIdCliente.Text = "";
             txtNombreCliente.Text = "";
             txtApellidoCliente.Text = "";
             txtTelefonoCliente.Text = "";

@@ -33,10 +33,10 @@ namespace Veterinaria3._0_1._0
         {
             using (var context = new ApplicationDbContext())
             {
-                var cliente = context.Cliente.Where(x => x.Nombre.Contains(txtBuscarNombre.Text)).ToList();
+                var cliente = context.Cliente.Where(x => x.Nombre.Contains(txtBuscarNombre.Text.ToUpper())).ToList();
                 dgvCliente.DataSource = cliente;
 
-                var mascota = context.Mascota.Where(x => x.NombreCliente.Contains(txtBuscarNombre.Text)).ToList();
+                var mascota = context.Mascota.Where(x => x.NombreCliente.Contains(txtBuscarNombre.Text.ToUpper())).ToList();
                 dgvMascota.DataSource = mascota;
             }
         }
@@ -74,7 +74,7 @@ namespace Veterinaria3._0_1._0
             }
         }
 //*********************************************************************************************************
-        private void TodosCliente()
+        private void TodosCliente()//metodo para mostrar la lista de los clientes
         {
             /*using (var context = new ApplicationDbContext())
             {
@@ -87,6 +87,10 @@ namespace Veterinaria3._0_1._0
             }*/
         }
 
-        
+//*********************************************************************************************************
+        private void dgvCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)//metodo para poder seleccionar una cita en el DataGridView
+        {
+            id = Convert.ToInt32(dgvCliente.CurrentRow.Cells[0].Value.ToString());
+        }
     }
 }
