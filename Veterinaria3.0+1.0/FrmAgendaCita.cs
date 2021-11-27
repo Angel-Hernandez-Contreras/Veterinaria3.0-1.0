@@ -13,6 +13,10 @@ namespace Veterinaria3._0_1._0
 {
     public partial class FrmAgendaCita : Form
     {
+        //Lista de veterinarios que trabajan en en la mañana
+        public String[] veterinarioMañana = { "Mario Gomez", "Joaquin Guzman", "Andres manuel" };
+        //Lista de veterinarios que trabajan en la Tarde
+        public String[] veterinariosTarde = { "Salinas gortari", "Guadalupe Victoria", "Felix Gallardo" };
         public int id = 0;
         public FrmAgendaCita()
         {
@@ -106,6 +110,17 @@ namespace Veterinaria3._0_1._0
         private void dgvAgendaCita_CellContentClick(object sender, DataGridViewCellEventArgs e)//metodo para poder seleccionar una cita en el DataGridView
         {
             id = Convert.ToInt32(dgvAgendaCita.CurrentRow.Cells[0].Value.ToString());          
+        }
+
+        private void cbHoraCita_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Dependiendo de la hora los doctores disponibles son diferentes
+            if (cbHoraCita.SelectedIndex + 1 >= 6)
+            {
+                cbNombreVeterinario.DataSource = veterinariosTarde;
+            }else{
+                cbNombreVeterinario.DataSource = veterinarioMañana;
+            }
         }
     }
 }

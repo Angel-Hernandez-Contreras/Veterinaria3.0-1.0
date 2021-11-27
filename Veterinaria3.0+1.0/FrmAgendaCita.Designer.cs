@@ -175,8 +175,6 @@ namespace Veterinaria3._0_1._0
             // cbNombreVeterinario
             // 
             this.cbNombreVeterinario.FormattingEnabled = true;
-            this.cbNombreVeterinario.Items.AddRange(new object[] {
-            "Luis"});
             this.cbNombreVeterinario.Location = new System.Drawing.Point(3, 191);
             this.cbNombreVeterinario.Name = "cbNombreVeterinario";
             this.cbNombreVeterinario.Size = new System.Drawing.Size(155, 23);
@@ -232,6 +230,7 @@ namespace Veterinaria3._0_1._0
             this.cbHoraCita.Name = "cbHoraCita";
             this.cbHoraCita.Size = new System.Drawing.Size(155, 23);
             this.cbHoraCita.TabIndex = 26;
+            this.cbHoraCita.SelectedIndexChanged += new System.EventHandler(this.cbHoraCita_SelectedIndexChanged);
             // 
             // label7
             // 
