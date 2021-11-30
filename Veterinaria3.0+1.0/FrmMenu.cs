@@ -51,5 +51,20 @@ namespace Veterinaria3._0_1._0
             mercancia.Show();//llamar al formulario Mercancia
             this.Close();//cerrar esta clase (Mercancia)
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            //ERROR NO BORRAR O NO COMPILA
+            frmHistorial historial = new frmHistorial();
+            historial.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmHistorial historial = new frmHistorial();
+            historial.Show();
+            this.Close();
+        }
     }
 }

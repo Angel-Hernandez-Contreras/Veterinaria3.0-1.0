@@ -36,7 +36,6 @@ namespace Veterinaria3._0_1._0
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAgendaCitas = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnInformacionClientes = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -45,6 +44,7 @@ namespace Veterinaria3._0_1._0
             this.btnMercancia = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNuevaCita = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel9.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -115,14 +115,6 @@ namespace Veterinaria3._0_1._0
             this.btnAgendaCitas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgendaCitas.UseVisualStyleBackColor = false;
             this.btnAgendaCitas.Click += new System.EventHandler(this.btnAgendaCitas_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Location = new System.Drawing.Point(489, 229);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(168, 168);
-            this.panel4.TabIndex = 9;
             // 
             // panel3
             // 
@@ -211,23 +203,36 @@ namespace Veterinaria3._0_1._0
             this.btnNuevaCita.UseVisualStyleBackColor = false;
             this.btnNuevaCita.Click += new System.EventHandler(this.btnNuevaCita_Click);
             // 
-            // Menu
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(497, 232);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 160);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "HISTORIAL";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
-            this.Name = "Menu";
+            this.Name = "FrmMenu";
             this.Text = "Menu";
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -247,7 +252,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
@@ -258,5 +262,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Button btnCajero;
         private System.Windows.Forms.Button btnMercancia;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
