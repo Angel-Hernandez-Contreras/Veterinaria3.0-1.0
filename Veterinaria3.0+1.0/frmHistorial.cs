@@ -28,5 +28,9 @@ namespace Veterinaria3._0_1._0
             menu.Show();//llamar al formulario Menu
             this.Close();//cerrar esta clase (Cajero)
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

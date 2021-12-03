@@ -29,6 +29,7 @@ namespace Veterinaria3._0_1._0
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -106,6 +107,7 @@ namespace Veterinaria3._0_1._0
             // btnAgendaCitas
             // 
             this.btnAgendaCitas.BackColor = System.Drawing.Color.White;
+            this.btnAgendaCitas.Image = ((System.Drawing.Image)(resources.GetObject("btnAgendaCitas.Image")));
             this.btnAgendaCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgendaCitas.Location = new System.Drawing.Point(3, 3);
             this.btnAgendaCitas.Name = "btnAgendaCitas";
@@ -128,6 +130,7 @@ namespace Veterinaria3._0_1._0
             // btnInformacionClientes
             // 
             this.btnInformacionClientes.BackColor = System.Drawing.Color.White;
+            this.btnInformacionClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformacionClientes.Image")));
             this.btnInformacionClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInformacionClientes.Location = new System.Drawing.Point(5, 3);
             this.btnInformacionClientes.Name = "btnInformacionClientes";
@@ -150,6 +153,7 @@ namespace Veterinaria3._0_1._0
             // btnCajero
             // 
             this.btnCajero.BackColor = System.Drawing.Color.White;
+            this.btnCajero.Image = ((System.Drawing.Image)(resources.GetObject("btnCajero.Image")));
             this.btnCajero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCajero.Location = new System.Drawing.Point(5, 3);
             this.btnCajero.Name = "btnCajero";
@@ -172,6 +176,7 @@ namespace Veterinaria3._0_1._0
             // btnMercancia
             // 
             this.btnMercancia.BackColor = System.Drawing.Color.White;
+            this.btnMercancia.Image = ((System.Drawing.Image)(resources.GetObject("btnMercancia.Image")));
             this.btnMercancia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMercancia.Location = new System.Drawing.Point(5, 3);
             this.btnMercancia.Name = "btnMercancia";
@@ -193,7 +198,9 @@ namespace Veterinaria3._0_1._0
             // 
             // btnNuevaCita
             // 
+            this.btnNuevaCita.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnNuevaCita.BackColor = System.Drawing.Color.White;
+            this.btnNuevaCita.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaCita.Image")));
             this.btnNuevaCita.Location = new System.Drawing.Point(3, 4);
             this.btnNuevaCita.Name = "btnNuevaCita";
             this.btnNuevaCita.Size = new System.Drawing.Size(160, 160);
@@ -206,6 +213,7 @@ namespace Veterinaria3._0_1._0
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(497, 232);
             this.button1.Name = "button1";
@@ -218,8 +226,9 @@ namespace Veterinaria3._0_1._0
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
