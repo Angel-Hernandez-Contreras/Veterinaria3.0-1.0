@@ -29,14 +29,9 @@ namespace Veterinaria3._0_1._0
         }
 
 //*********************************************************************************************************
-        private void txtCodigoProducto_TextChanged(object sender, EventArgs e)//textbox para buscar mediante codigo producto
+        private void FrmMercancia_Load(object sender, EventArgs e)
         {
-            using (var context = new ApplicationDbContext())
-            {
-                /*var codigo = context.Mercancia.First(x => x.Id == (txtBuscarCodigoProducto.Text)).ToList();
-                dgvMercancia.DataSource = codigo;*/
-
-            }
+            TodosMercancia();
         }
 
 //*********************************************************************************************************
@@ -55,14 +50,20 @@ namespace Veterinaria3._0_1._0
         {
             using (var context = new ApplicationDbContext())
             {
-                var agregar = new Mercancia();
-                agregar.Nombre = txtAgregarNombreProducto.Text.ToUpper();
-                agregar.Cantidad = Convert.ToInt32(txtAgregarCantidadProducto.Text.ToUpper());
-                agregar.Precio = Convert.ToInt32(txtAgregarPrecioProducto.Text.ToUpper());
+                if (txtBuscarNombreProducto.Text.Length != 0 && txtAgregarCantidadProducto.Text.Length != 0 && txtAgregarPrecioProducto.Text.Length != 0)
+                {
+                    var agregar = new Mercancia();
+                    agregar.Nombre = txtAgregarNombreProducto.Text.ToUpper();
+                    agregar.Cantidad = Convert.ToInt32(txtAgregarCantidadProducto.Text.ToUpper());
+                    agregar.Precio = Convert.ToInt32(txtAgregarPrecioProducto.Text.ToUpper());
+                    agregar.Estado = "ACTIVO";
+                    context.Mercancia.Add(agregar);
 
-                context.SaveChanges();
-            }
+                    Limpiar();
 
+                    context.SaveChanges();
+                }
+            }          
             TodosMercancia();
         }
 
@@ -82,14 +83,14 @@ namespace Veterinaria3._0_1._0
                         mercancia.Precio = Convert.ToDouble(txtAgregarPrecioProducto.Text.ToUpper());
                         context.SaveChanges();
                     }
+                    Limpiar();
                 }
-            }
-
+            }    
             TodosMercancia();
         }
 
 //*********************************************************************************************************
-        private void btnEliminar_Click_1(object sender, EventArgs e)//bton para eliminar producto
+        private void btnActivarDesactivar_Click(object sender, EventArgs e)
         {
             using (var context = new ApplicationDbContext())
             {
@@ -99,34 +100,36 @@ namespace Veterinaria3._0_1._0
                     var mercancia = context.Mercancia.First(x => x.Id == id);
                     if (mercancia != null)
                     {
-                        context.Remove(mercancia);
+                        if (mercancia.Estado == "INACTIVO")
+                        {
+                            mercancia.Estado = "ACTIVO";
+                        }
+                        else
+                        {
+                            mercancia.Estado = "INACTIVO";
+                        }
                         context.SaveChanges();
                     }
+                    Limpiar();
                 }
+                TodosMercancia();
             }
-
-            TodosMercancia();
         }
 
 //*********************************************************************************************************
         private void btnLimpiar_Click(object sender, EventArgs e)//boton par alimpiar
         {
-            txtBuscarIdProducto.Text = "";
-            txtAgregarNombreProducto.Text = "";
-
-            txtAgregarNombreProducto.Text = "";
-            txtAgregarCantidadProducto.Text = "";
-            txtAgregarCantidadProducto.Text = "";
+            Limpiar();
         }
 
 //*********************************************************************************************************
         private void TodosMercancia()
         {
-            /*using (var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
                 {
                     var mercancia = context.Mercancia.ToList();
                     dgvMercancia.DataSource = mercancia;
-                }*/
+                }
         }
 
 //*********************************************************************************************************
@@ -134,9 +137,20 @@ namespace Veterinaria3._0_1._0
         {
             id = Convert.ToInt32(dgvMercancia.CurrentRow.Cells[0].Value.ToString());
 
-            txtAgregarNombreProducto.Text = dgvMercancia.CurrentRow.Cells[2].Value.ToString();
-            txtAgregarCantidadProducto.Text = dgvMercancia.CurrentRow.Cells[3].Value.ToString();
-            txtAgregarPrecioProducto.Text = dgvMercancia.CurrentRow.Cells[4].Value.ToString();
+            txtAgregarNombreProducto.Text = dgvMercancia.CurrentRow.Cells[1].Value.ToString();
+            txtAgregarCantidadProducto.Text = dgvMercancia.CurrentRow.Cells[2].Value.ToString();
+            txtAgregarPrecioProducto.Text = dgvMercancia.CurrentRow.Cells[3].Value.ToString();
         }
+
+//*********************************************************************************************************
+        public void Limpiar()//metodo para limpiar
+        {
+            txtAgregarNombreProducto.Text = "";
+
+            txtAgregarNombreProducto.Text = "";
+            txtAgregarCantidadProducto.Text = "";
+            txtAgregarPrecioProducto.Text = "";
+        }
+        
     }
 }

@@ -62,6 +62,7 @@ namespace Veterinaria3._0_1._0
             this.label15 = new System.Windows.Forms.Label();
             this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
             this.pFichaCita = new System.Windows.Forms.Panel();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.pbAnimal = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.dgvFichaCita = new System.Windows.Forms.DataGridView();
@@ -435,6 +436,7 @@ namespace Veterinaria3._0_1._0
             // pFichaCita
             // 
             this.pFichaCita.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pFichaCita.Controls.Add(this.lblResultado);
             this.pFichaCita.Controls.Add(this.pbAnimal);
             this.pFichaCita.Controls.Add(this.label25);
             this.pFichaCita.Controls.Add(this.dgvFichaCita);
@@ -443,6 +445,16 @@ namespace Veterinaria3._0_1._0
             this.pFichaCita.Name = "pFichaCita";
             this.pFichaCita.Size = new System.Drawing.Size(353, 265);
             this.pFichaCita.TabIndex = 11;
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.BackColor = System.Drawing.Color.White;
+            this.lblResultado.ForeColor = System.Drawing.Color.Red;
+            this.lblResultado.Location = new System.Drawing.Point(4, 117);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(0, 15);
+            this.lblResultado.TabIndex = 28;
             // 
             // pbAnimal
             // 
@@ -539,6 +551,7 @@ namespace Veterinaria3._0_1._0
             this.Controls.Add(this.pCita);
             this.Controls.Add(this.pInformacionCliente);
             this.Controls.Add(this.pInformacionMascota);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "NuevaCita";
             this.Text = "Nueva Cita";
             this.pInformacionMascota.ResumeLayout(false);
@@ -601,6 +614,7 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn Veterinario;
         private System.Windows.Forms.ComboBox cbHoraCita;
+        private System.Windows.Forms.Label lblResultado;
     }
 }
 

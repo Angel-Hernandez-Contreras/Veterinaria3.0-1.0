@@ -250,8 +250,10 @@ namespace Veterinaria3._0_1._0
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmInformacionCliente";
             this.Text = "InformacionCliente";
+            this.Load += new System.EventHandler(this.FrmInformacionCliente_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();

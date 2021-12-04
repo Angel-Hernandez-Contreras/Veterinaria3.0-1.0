@@ -23,7 +23,7 @@ namespace Veterinaria3._0_1._0
             InitializeComponent();
         }
 
-        //*********************************************************************************************************
+//*********************************************************************************************************
         private void btnRegresar_Click(object sender, EventArgs e)//boton para ingresar a Menu
         {
             FrmMenu menu = new FrmMenu();
@@ -31,13 +31,13 @@ namespace Veterinaria3._0_1._0
             this.Close();//cerrar esta clase (Agenda Cita)
         }
 
-        //*********************************************************************************************************
+//*********************************************************************************************************
         private void AgendaCita_Load(object sender, EventArgs e)//carga las citas al abrir el formulario
         {
             TodosCita();
         }
 
-        //*********************************************************************************************************
+//*********************************************************************************************************
         private void txtBuscar_TextChanged(object sender, EventArgs e)//textbox para Buscar Cita
         {
             using (var context = new ApplicationDbContext())
@@ -98,12 +98,12 @@ namespace Veterinaria3._0_1._0
 //********************************************************************************************************* 
         private void TodosCita()//metodo para mostrar la lista de las citas
         {
-            /*using (var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
            {
                var cita = context.Cita.ToList();
                dgvAgendaCita.DataSource = cita;
 
-           }*/
+           }
         }
 
 //********************************************************************************************************* 

@@ -20,7 +20,7 @@ namespace Veterinaria3._0_1._0
             InitializeComponent();
         }
 
-        //*********************************************************************************************************
+//*********************************************************************************************************
         private void btnRegresar_Click(object sender, EventArgs e)//boton para ingresar a Menu
         {
             FrmMenu menu = new FrmMenu();
@@ -28,7 +28,13 @@ namespace Veterinaria3._0_1._0
             this.Close();//cerrar esta clase (Informacion Clientes)
         }
 
-        //*********************************************************************************************************
+//*********************************************************************************************************
+        private void FrmInformacionCliente_Load(object sender, EventArgs e)
+        {
+            TodosCliente();
+        }
+
+//*********************************************************************************************************
         private void txtBuscarNombre_TextChanged(object sender, EventArgs e)//textbox para buscar mediante Nombre Cliente
         {
             using (var context = new ApplicationDbContext())
@@ -41,13 +47,13 @@ namespace Veterinaria3._0_1._0
             }
         }
 
-        //*********************************************************************************************************
+//*********************************************************************************************************
         private void btnLimpiar_Click(object sender, EventArgs e)//boton para limpiar
         {
             txtBuscarNombre.Text = "";
         }
 
-        //*********************************************************************************************************
+//*********************************************************************************************************
         private void btnEliminar_Click(object sender, EventArgs e)//boton eliminar cliente
         {
             using (var context = new ApplicationDbContext())
@@ -76,7 +82,7 @@ namespace Veterinaria3._0_1._0
 //*********************************************************************************************************
         private void TodosCliente()//metodo para mostrar la lista de los clientes
         {
-            /*using (var context = new ApplicationDbContext())
+            using (var context = new ApplicationDbContext())
             {
             var cliente = context.Cliente.ToList();
             dgvCliente.DataSource = cliente;
@@ -84,7 +90,7 @@ namespace Veterinaria3._0_1._0
             var mascota = context.Mascota.ToList();
             dgvMascota.DataSource = mascota;
 
-            }*/
+            }
         }
 
 //*********************************************************************************************************
@@ -92,5 +98,7 @@ namespace Veterinaria3._0_1._0
         {
             id = Convert.ToInt32(dgvCliente.CurrentRow.Cells[0].Value.ToString());
         }
+
+        
     }
 }

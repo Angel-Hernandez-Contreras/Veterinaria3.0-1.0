@@ -46,12 +46,14 @@ namespace Veterinaria3._0_1._0
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNuevaCita = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel9.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel7
@@ -108,7 +110,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.btnAgendaCitas.BackColor = System.Drawing.Color.White;
             this.btnAgendaCitas.Image = ((System.Drawing.Image)(resources.GetObject("btnAgendaCitas.Image")));
-            this.btnAgendaCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgendaCitas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAgendaCitas.Location = new System.Drawing.Point(3, 3);
             this.btnAgendaCitas.Name = "btnAgendaCitas";
             this.btnAgendaCitas.Size = new System.Drawing.Size(160, 160);
@@ -131,7 +133,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.btnInformacionClientes.BackColor = System.Drawing.Color.White;
             this.btnInformacionClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnInformacionClientes.Image")));
-            this.btnInformacionClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInformacionClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnInformacionClientes.Location = new System.Drawing.Point(5, 3);
             this.btnInformacionClientes.Name = "btnInformacionClientes";
             this.btnInformacionClientes.Size = new System.Drawing.Size(160, 160);
@@ -154,7 +156,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.btnCajero.BackColor = System.Drawing.Color.White;
             this.btnCajero.Image = ((System.Drawing.Image)(resources.GetObject("btnCajero.Image")));
-            this.btnCajero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCajero.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCajero.Location = new System.Drawing.Point(5, 3);
             this.btnCajero.Name = "btnCajero";
             this.btnCajero.Size = new System.Drawing.Size(160, 160);
@@ -177,7 +179,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.btnMercancia.BackColor = System.Drawing.Color.White;
             this.btnMercancia.Image = ((System.Drawing.Image)(resources.GetObject("btnMercancia.Image")));
-            this.btnMercancia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMercancia.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnMercancia.Location = new System.Drawing.Point(5, 3);
             this.btnMercancia.Name = "btnMercancia";
             this.btnMercancia.Size = new System.Drawing.Size(160, 160);
@@ -201,6 +203,7 @@ namespace Veterinaria3._0_1._0
             this.btnNuevaCita.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnNuevaCita.BackColor = System.Drawing.Color.White;
             this.btnNuevaCita.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevaCita.Image")));
+            this.btnNuevaCita.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNuevaCita.Location = new System.Drawing.Point(3, 4);
             this.btnNuevaCita.Name = "btnNuevaCita";
             this.btnNuevaCita.Size = new System.Drawing.Size(160, 160);
@@ -214,15 +217,24 @@ namespace Veterinaria3._0_1._0
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(497, 232);
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(5, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(160, 160);
             this.button1.TabIndex = 13;
-            this.button1.Text = "HISTORIAL";
+            this.button1.Text = "HISTORIAL VENTAS";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Location = new System.Drawing.Point(489, 229);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(168, 168);
+            this.panel4.TabIndex = 0;
             // 
             // FrmMenu
             // 
@@ -231,7 +243,7 @@ namespace Veterinaria3._0_1._0
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -241,6 +253,7 @@ namespace Veterinaria3._0_1._0
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmMenu";
             this.Text = "Menu";
             this.panel9.ResumeLayout(false);
@@ -250,6 +263,7 @@ namespace Veterinaria3._0_1._0
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -272,5 +286,6 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Button btnMercancia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
     }
 }

@@ -39,19 +39,19 @@ namespace Veterinaria3._0_1._0
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblResultado = new System.Windows.Forms.Label();
+            this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.txtCantidadProducto = new System.Windows.Forms.TextBox();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnTerminarProceso = new System.Windows.Forms.Button();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
-            this.btnAgregarProducto = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnModificarCantidad = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
@@ -91,6 +91,8 @@ namespace Veterinaria3._0_1._0
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(158, 23);
             this.txtTotal.TabIndex = 2;
+            this.txtTotal.Text = "0";
+            this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -115,6 +117,7 @@ namespace Veterinaria3._0_1._0
             this.dgvTicket.RowTemplate.Height = 25;
             this.dgvTicket.Size = new System.Drawing.Size(433, 390);
             this.dgvTicket.TabIndex = 0;
+            this.dgvTicket.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTicket_CellContentClick);
             // 
             // Producto
             // 
@@ -139,17 +142,38 @@ namespace Veterinaria3._0_1._0
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel3.Controls.Add(this.lblResultado);
+            this.panel3.Controls.Add(this.btnAgregarProducto);
             this.panel3.Controls.Add(this.txtCantidadProducto);
             this.panel3.Controls.Add(this.txtNombreProducto);
-            this.panel3.Controls.Add(this.txtIdProducto);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(85, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(270, 215);
             this.panel3.TabIndex = 9;
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.BackColor = System.Drawing.Color.White;
+            this.lblResultado.ForeColor = System.Drawing.Color.Red;
+            this.lblResultado.Location = new System.Drawing.Point(4, 146);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(0, 15);
+            this.lblResultado.TabIndex = 10;
+            // 
+            // btnAgregarProducto
+            // 
+            this.btnAgregarProducto.BackColor = System.Drawing.Color.White;
+            this.btnAgregarProducto.Location = new System.Drawing.Point(3, 164);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(263, 23);
+            this.btnAgregarProducto.TabIndex = 0;
+            this.btnAgregarProducto.Text = "Agregar Producto";
+            this.btnAgregarProducto.UseVisualStyleBackColor = false;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // txtCantidadProducto
             // 
@@ -164,13 +188,6 @@ namespace Veterinaria3._0_1._0
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(130, 23);
             this.txtNombreProducto.TabIndex = 8;
-            // 
-            // txtIdProducto
-            // 
-            this.txtIdProducto.Location = new System.Drawing.Point(136, 49);
-            this.txtIdProducto.Name = "txtIdProducto";
-            this.txtIdProducto.Size = new System.Drawing.Size(130, 23);
-            this.txtIdProducto.TabIndex = 7;
             // 
             // label5
             // 
@@ -202,16 +219,6 @@ namespace Veterinaria3._0_1._0
             this.label6.TabIndex = 6;
             this.label6.Text = "CAJERO";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Id Producto";
-            // 
             // btnTerminarProceso
             // 
             this.btnTerminarProceso.BackColor = System.Drawing.Color.White;
@@ -226,24 +233,13 @@ namespace Veterinaria3._0_1._0
             // btnEliminarProducto
             // 
             this.btnEliminarProducto.BackColor = System.Drawing.Color.White;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(4, 80);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(4, 57);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(263, 23);
             this.btnEliminarProducto.TabIndex = 1;
             this.btnEliminarProducto.Text = "Eliminar Producto";
             this.btnEliminarProducto.UseVisualStyleBackColor = false;
             this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
-            // 
-            // btnAgregarProducto
-            // 
-            this.btnAgregarProducto.BackColor = System.Drawing.Color.White;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(4, 22);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(263, 23);
-            this.btnAgregarProducto.TabIndex = 0;
-            this.btnAgregarProducto.Text = "Agregar Producto";
-            this.btnAgregarProducto.UseVisualStyleBackColor = false;
-            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
             // 
             // panel1
             // 
@@ -268,18 +264,29 @@ namespace Veterinaria3._0_1._0
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel4.Controls.Add(this.btnLimpiar);
             this.panel4.Controls.Add(this.btnModificarCantidad);
-            this.panel4.Controls.Add(this.btnAgregarProducto);
             this.panel4.Controls.Add(this.btnEliminarProducto);
             this.panel4.Location = new System.Drawing.Point(85, 221);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(270, 132);
             this.panel4.TabIndex = 11;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(4, 86);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(263, 23);
+            this.btnLimpiar.TabIndex = 3;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // btnModificarCantidad
             // 
             this.btnModificarCantidad.BackColor = System.Drawing.Color.White;
-            this.btnModificarCantidad.Location = new System.Drawing.Point(3, 51);
+            this.btnModificarCantidad.Location = new System.Drawing.Point(3, 28);
             this.btnModificarCantidad.Name = "btnModificarCantidad";
             this.btnModificarCantidad.Size = new System.Drawing.Size(262, 23);
             this.btnModificarCantidad.TabIndex = 3;
@@ -307,6 +314,7 @@ namespace Veterinaria3._0_1._0
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FrmCajero";
             this.Text = "Cajero";
             this.panel2.ResumeLayout(false);
@@ -330,11 +338,9 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtCantidadProducto;
         private System.Windows.Forms.TextBox txtNombreProducto;
-        private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnTerminarProceso;
         private System.Windows.Forms.Button btnEliminarProducto;
         private System.Windows.Forms.Button btnAgregarProducto;
@@ -347,5 +353,7 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnModificarCantidad;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

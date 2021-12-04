@@ -34,7 +34,8 @@ namespace Veterinaria3._0_1._0
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -83,32 +84,44 @@ namespace Veterinaria3._0_1._0
             // 
             this.txtContraseña.Location = new System.Drawing.Point(314, 269);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = 'v';
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.PlaceholderText = "Ingresa Contraseña";
             this.txtContraseña.Size = new System.Drawing.Size(272, 23);
             this.txtContraseña.TabIndex = 4;
             // 
-            // textBox1
+            // txtUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(314, 240);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Ingresa Usuario";
-            this.textBox1.Size = new System.Drawing.Size(272, 23);
-            this.textBox1.TabIndex = 5;
+            this.txtUsuario.Location = new System.Drawing.Point(314, 240);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PlaceholderText = "Ingresa Usuario";
+            this.txtUsuario.Size = new System.Drawing.Size(272, 23);
+            this.txtUsuario.TabIndex = 5;
             // 
-            // Inicio
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.BackColor = System.Drawing.Color.White;
+            this.lblResultado.ForeColor = System.Drawing.Color.Red;
+            this.lblResultado.Location = new System.Drawing.Point(238, 222);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(0, 15);
+            this.lblResultado.TabIndex = 6;
+            // 
+            // FrmInicio
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblResultado);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label1);
-            this.Name = "Inicio";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "FrmInicio";
             this.Text = "Inicio";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,6 +135,7 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label lblResultado;
     }
 }
