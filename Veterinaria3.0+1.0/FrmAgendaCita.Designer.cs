@@ -73,6 +73,7 @@ namespace Veterinaria3._0_1._0
             // 
             // dgvAgendaCita
             // 
+            this.dgvAgendaCita.BackgroundColor = System.Drawing.Color.White;
             this.dgvAgendaCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAgendaCita.Location = new System.Drawing.Point(3, 4);
             this.dgvAgendaCita.Name = "dgvAgendaCita";
@@ -115,7 +116,7 @@ namespace Veterinaria3._0_1._0
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.BackColor = System.Drawing.Color.BurlyWood;
             this.btnLimpiar.Location = new System.Drawing.Point(4, 85);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(156, 23);
@@ -145,7 +146,7 @@ namespace Veterinaria3._0_1._0
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.BackColor = System.Drawing.Color.LightCoral;
             this.btnEliminar.Location = new System.Drawing.Point(3, 87);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(156, 23);
@@ -244,7 +245,7 @@ namespace Veterinaria3._0_1._0
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.Color.White;
+            this.btnModificar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnModificar.Location = new System.Drawing.Point(3, 235);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(155, 23);

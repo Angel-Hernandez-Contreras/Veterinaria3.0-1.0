@@ -17,7 +17,7 @@ namespace Veterinaria3._0_1._0
         public String[] veterinarioMañana = { "Mario Gomez", "Joaquin Guzman", "Andres manuel" };
         //Lista de veterinarios que trabajan en la Tarde
         public String[] veterinariosTarde = { "Salinas gortari", "Guadalupe Victoria", "Felix Gallardo" };
-        public int id = 0;
+        public int id = 0;//recibe el valor del Id seleccionado en el DataGridView
         public FrmAgendaCita()
         {
             InitializeComponent();
@@ -34,8 +34,8 @@ namespace Veterinaria3._0_1._0
 //*********************************************************************************************************
         private void AgendaCita_Load(object sender, EventArgs e)//carga las citas al abrir el formulario
         {
-            TodosCita();
-        }
+            TodosCita();//llama al metodo Todos Cita
+        }//fin del metodo
 
 //*********************************************************************************************************
         private void txtBuscar_TextChanged(object sender, EventArgs e)//textbox para Buscar Cita
@@ -45,17 +45,46 @@ namespace Veterinaria3._0_1._0
                 var cita = context.Cita.Where(x => x.NombreCliente.Contains(txtBuscar.Text)).ToList();
                 dgvAgendaCita.DataSource = cita;
             }
-        }
+        }//fin del metodo
 
 //*********************************************************************************************************
         private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Modificar();//llama al metodo Modificar
+            TodosCita();//llama al metodo Todos Cita
+        }//fin del metodo
+
+//********************************************************************************************************* 
+        private void btnEliminar_Click(object sender, EventArgs e)//boton para elñiminar cita
+        {
+            Eliminar();//llama al metodo Eliminar
+            TodosCita();//llama al metodo Todos Cita
+        }
+
+//********************************************************************************************************* 
+        private void btnLimpiar_Click(object sender, EventArgs e)//boton para limpiar el TextBox Bucar
+        {
+            txtBuscar.Text = "";
+        }
+
+//********************************************************************************************************* 
+        public void TodosCita()//metodo para mostrar la lista de las citas
+        {
+           using (var context = new ApplicationDbContext())
+           {
+               var cita = context.Cita.ToList();
+               dgvAgendaCita.DataSource = cita;
+           }//fin del using
+        }//fin del metodo
+
+//********************************************************************************************************* 
+        public void Modificar()//metodo para Modificar la Ficha de la Cita
         {
             using (var context = new ApplicationDbContext())
             {
                 if (id != 0)
                 {
-                    //buscar con un ORM
-                    var cita = context.Cita.First(x => x.Id == id);
+                    var cita = context.Cita.First(x => x.Id == id);//buscar con un ORM
                     if (cita != null)
                     {
                         cita.FechaCita = Convert.ToString(dtpFechaCita.Value).ToUpper();
@@ -64,54 +93,32 @@ namespace Veterinaria3._0_1._0
                         context.SaveChanges();
                     }
                 }
-            }
-
-            TodosCita();
-        }
-
+            }//fin del using
+        }//fin del metodo
 //********************************************************************************************************* 
-        private void btnEliminar_Click(object sender, EventArgs e)//boton para elñiminar cita
+        public void Eliminar()//metodo para Eliminar la Ficha de la Cita
         {
             using (var context = new ApplicationDbContext())
             {
                 if (id != 0)
-                {
-                    //buscar con un ORM
-                    var cita = context.Cita.First(x => x.Id == id);
+                {                   
+                    var cita = context.Cita.First(x => x.Id == id);//buscar con un ORM
                     if (cita != null)
                     {
                         context.Remove(cita);
                         context.SaveChanges();
                     }
                 }
-            }
-
-            TodosCita();
-        }
-
-//********************************************************************************************************* 
-        private void btnLimpiar_Click(object sender, EventArgs e)//boton para limpiar
-        {
-            txtBuscar.Text = "";
-        }
-
-//********************************************************************************************************* 
-        private void TodosCita()//metodo para mostrar la lista de las citas
-        {
-            using (var context = new ApplicationDbContext())
-           {
-               var cita = context.Cita.ToList();
-               dgvAgendaCita.DataSource = cita;
-
-           }
-        }
+            }//fin del using
+        }//fin del metodo
 
 //********************************************************************************************************* 
         private void dgvAgendaCita_CellContentClick(object sender, DataGridViewCellEventArgs e)//metodo para poder seleccionar una cita en el DataGridView
         {
             id = Convert.ToInt32(dgvAgendaCita.CurrentRow.Cells[0].Value.ToString());          
-        }
+        }//fin del metodo
 
+//********************************************************************************************************* 
         private void cbHoraCita_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Dependiendo de la hora los doctores disponibles son diferentes
@@ -121,6 +128,8 @@ namespace Veterinaria3._0_1._0
             }else{
                 cbNombreVeterinario.DataSource = veterinarioMañana;
             }
-        }
+        }//fin del metodo
+
+//********************************************************************************************************* 
     }
 }

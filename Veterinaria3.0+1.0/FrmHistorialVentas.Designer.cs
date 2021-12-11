@@ -78,6 +78,7 @@ namespace Veterinaria3._0_1._0
             // 
             // dgvHistorialVentas
             // 
+            this.dgvHistorialVentas.BackgroundColor = System.Drawing.Color.White;
             this.dgvHistorialVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialVentas.Location = new System.Drawing.Point(3, 4);
             this.dgvHistorialVentas.Name = "dgvHistorialVentas";

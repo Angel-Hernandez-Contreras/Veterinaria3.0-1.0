@@ -34,7 +34,7 @@ namespace Veterinaria3._0_1._0
             this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.pInformacionMascota = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.clbVacunacionesMascota = new System.Windows.Forms.CheckedListBox();
+            this.chbVacunacionesMascota = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@ namespace Veterinaria3._0_1._0
             // 
             this.pInformacionMascota.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pInformacionMascota.Controls.Add(this.label8);
-            this.pInformacionMascota.Controls.Add(this.clbVacunacionesMascota);
+            this.pInformacionMascota.Controls.Add(this.chbVacunacionesMascota);
             this.pInformacionMascota.Controls.Add(this.label6);
             this.pInformacionMascota.Controls.Add(this.label5);
             this.pInformacionMascota.Controls.Add(this.label3);
@@ -136,13 +136,16 @@ namespace Veterinaria3._0_1._0
             this.label8.TabIndex = 19;
             this.label8.Text = "Vacunaciones";
             // 
-            // clbVacunacionesMascota
+            // chbVacunacionesMascota
             // 
-            this.clbVacunacionesMascota.FormattingEnabled = true;
-            this.clbVacunacionesMascota.Location = new System.Drawing.Point(115, 143);
-            this.clbVacunacionesMascota.Name = "clbVacunacionesMascota";
-            this.clbVacunacionesMascota.Size = new System.Drawing.Size(190, 112);
-            this.clbVacunacionesMascota.TabIndex = 17;
+            this.chbVacunacionesMascota.FormattingEnabled = true;
+            this.chbVacunacionesMascota.Items.AddRange(new object[] {
+            "Prueba 1",
+            "Prueba 2"});
+            this.chbVacunacionesMascota.Location = new System.Drawing.Point(115, 143);
+            this.chbVacunacionesMascota.Name = "chbVacunacionesMascota";
+            this.chbVacunacionesMascota.Size = new System.Drawing.Size(190, 112);
+            this.chbVacunacionesMascota.TabIndex = 17;
             // 
             // label6
             // 
@@ -477,6 +480,7 @@ namespace Veterinaria3._0_1._0
             // 
             // dgvFichaCita
             // 
+            this.dgvFichaCita.BackgroundColor = System.Drawing.Color.White;
             this.dgvFichaCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFichaCita.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCliente,
@@ -576,7 +580,7 @@ namespace Veterinaria3._0_1._0
         private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Panel pInformacionMascota;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckedListBox clbVacunacionesMascota;
+        private System.Windows.Forms.CheckedListBox chbVacunacionesMascota;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;

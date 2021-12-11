@@ -68,11 +68,12 @@ namespace Veterinaria3._0_1._0
             // 
             // dgvCliente
             // 
+            this.dgvCliente.BackgroundColor = System.Drawing.Color.White;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(14, 34);
+            this.dgvCliente.Location = new System.Drawing.Point(3, 34);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.RowTemplate.Height = 25;
-            this.dgvCliente.Size = new System.Drawing.Size(297, 404);
+            this.dgvCliente.Size = new System.Drawing.Size(317, 413);
             this.dgvCliente.TabIndex = 37;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
@@ -88,7 +89,7 @@ namespace Veterinaria3._0_1._0
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.BackColor = System.Drawing.Color.LightCoral;
             this.btnEliminar.Location = new System.Drawing.Point(2, 70);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(159, 23);
@@ -123,16 +124,17 @@ namespace Veterinaria3._0_1._0
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(502, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(304, 450);
+            this.panel3.Size = new System.Drawing.Size(298, 450);
             this.panel3.TabIndex = 10;
             // 
             // dgvMascota
             // 
+            this.dgvMascota.BackgroundColor = System.Drawing.Color.White;
             this.dgvMascota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMascota.Location = new System.Drawing.Point(13, 34);
+            this.dgvMascota.Location = new System.Drawing.Point(3, 34);
             this.dgvMascota.Name = "dgvMascota";
             this.dgvMascota.RowTemplate.Height = 25;
-            this.dgvMascota.Size = new System.Drawing.Size(273, 404);
+            this.dgvMascota.Size = new System.Drawing.Size(292, 413);
             this.dgvMascota.TabIndex = 49;
             // 
             // label3
@@ -169,7 +171,7 @@ namespace Veterinaria3._0_1._0
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.White;
+            this.btnLimpiar.BackColor = System.Drawing.Color.BurlyWood;
             this.btnLimpiar.Location = new System.Drawing.Point(8, 115);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(159, 23);
@@ -180,12 +182,13 @@ namespace Veterinaria3._0_1._0
             // 
             // btnRegresar
             // 
+            this.btnRegresar.BackColor = System.Drawing.Color.White;
             this.btnRegresar.Location = new System.Drawing.Point(11, 118);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(158, 23);
             this.btnRegresar.TabIndex = 0;
             this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // panel4

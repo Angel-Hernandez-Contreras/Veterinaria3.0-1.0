@@ -25,8 +25,8 @@ namespace Veterinaria3._0_1._0
             {
                 var historial = context.Historial.ToList();
                 dgvHistorialVentas.DataSource = historial;
-            }
-        }
+            }//fin del using
+        }//fin del metodo
 
 //*********************************************************************************************************
         private void btnRegresar_Click(object sender, EventArgs e)//boton para ingresar a Menu
@@ -34,7 +34,8 @@ namespace Veterinaria3._0_1._0
             FrmMenu menu = new FrmMenu();
             menu.Show();//llamar al formulario Menu
             this.Close();//cerrar esta clase (Cajero)
-        }
- 
+        }//fin del metodo
+
+//*********************************************************************************************************
     }
 }

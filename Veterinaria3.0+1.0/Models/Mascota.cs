@@ -14,5 +14,6 @@ namespace Veterinaria3._0_1._0.Models
         public string Especie { get; set; } 
         public string ColorPelo { get; set; }
         public string Sexo { get; set; }
+        public string Vacunas { get; set; }
     }
 }
