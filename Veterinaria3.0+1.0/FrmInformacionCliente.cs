@@ -39,10 +39,12 @@ namespace Veterinaria3._0_1._0
         {
             using (var context = new ApplicationDbContext())
             {
-                var cliente = context.Cliente.Where(x => x.Nombre.Contains(txtBuscarNombre.Text.ToUpper())).ToList();//buscar con un ORM
+                var cliente = context.Cliente.First(x => x.Nombre.Contains(txtBuscarNombre.Text.ToUpper()));//buscar con un ORM
                 dgvCliente.DataSource = cliente;
 
-                var mascota = context.Mascota.Where(x => x.NombreCliente.Contains(txtBuscarNombre.Text.ToUpper())).ToList();//buscar con un ORM
+                /*var mascota = context.Mascota.Where(x => x.NombreCliente.Contains(txtBuscarNombre.Text.ToUpper())).ToList();//buscar con un ORM
+                dgvMascota.DataSource = mascota;*/
+                var mascota = context.Mascota.Where(x => x.ClienteId == cliente.Id).ToList();
                 dgvMascota.DataSource = mascota;
             }//fin del using
         }//fin del metodo

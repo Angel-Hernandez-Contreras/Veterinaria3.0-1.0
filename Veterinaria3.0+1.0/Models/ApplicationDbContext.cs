@@ -9,9 +9,13 @@ namespace Veterinaria3._0_1._0.Models
 {
     class ApplicationDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
             optionBuilder.UseNpgsql("Host=localhost; Database=Veterinaria; Username=postgres; password=Roman55;").EnableSensitiveDataLogging(true);
+        }*/
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source =.; Initial Catalog= Veterinaria; Integrated Security=true;");
         }
 
         public DbSet<Cuenta> Cuenta { get; set; }

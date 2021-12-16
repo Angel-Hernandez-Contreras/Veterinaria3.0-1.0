@@ -91,11 +91,11 @@ namespace Veterinaria3._0_1._0
                     {
                         if (mercancia.Estado == "INACTIVO")//if para para que no agregue un Producto al Ticket si este esta Inactivo
                         {
-                            lblResultado.Text = "EL PRODUCTO NO ESTA ACTIVO";
+                            MessageBox.Show("EL PRODUCTO NO ESTA ACTIVO","Error", MessageBoxButtons.OK);
                         }
                         else if (mercancia.Cantidad < Convert.ToInt32(lblCantidadProducto.Text))//else/if para que no agregue un Producto al Ticket si se este la Cantidad es mayor que la Existencia
                         {
-                            lblResultado.Text = "LA EXISTENCIA DEL PRODUCTO ES DE [" + Convert.ToString(mercancia.Cantidad + "]");
+                            MessageBox.Show(" LA EXISTENCIA DEL PRODUCTO ES DE[" + Convert.ToString(mercancia.Cantidad + "]"), "Error",MessageBoxButtons.OK);
                         }
                         else//else donde agrega los datos al ticket
                         {

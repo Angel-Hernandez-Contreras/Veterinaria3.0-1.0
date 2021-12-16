@@ -13,5 +13,7 @@ namespace Veterinaria3._0_1._0.Models
         public string Apellido { get; set; }
         public string Sexo { get; set; }
         public int Telefono { get; set; }
+        //declaracion de la relacion cliente/mascota
+        public List<Mascota> Mascota { get; set; }
     }
 }
