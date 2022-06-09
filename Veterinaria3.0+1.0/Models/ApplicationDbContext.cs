@@ -15,7 +15,7 @@ namespace Veterinaria3._0_1._0.Models
         }*/
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source =.; Initial Catalog= Veterinaria; Integrated Security=true;");
+            optionsBuilder.UseSqlServer("Data Source =.; Initial Catalog= Bar; Integrated Security=true;");
         }
 
         public DbSet<Cuenta> Cuenta { get; set; }
